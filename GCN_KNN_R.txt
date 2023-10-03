@@ -1,0 +1,9 @@
+Trial 00: test accuracy 0.7500
+Trial 01: test accuracy 0.7530
+Trial 02: test accuracy 0.7500
+Trial 03: test accuracy 0.7490
+Trial 04: test accuracy 0.7510
+[0.7500000596046448, 0.753000020980835, 0.7500000596046448, 0.7490000128746033, 0.7510000467300415]
+std of test accuracy 0.13564625939608194
+average of test accuracy 75.06000399589539
+Namespace(alpha=100.0, dataset='pubmed', dropout2=0.5, dropout_adj2=0.0, epochs=2000, half_train=0, half_val_as_train=0, hidden=32, k=15, klabel=30, knn_metric='cosine', lr=0.01, nlayers=2, normalization='sym', ntrials=5, patience=3000, sparse=0, w_decay=0.0005)
