@@ -3,7 +3,7 @@ Codes for the paper `Latent Graph Inference with Limited Supervision`.
 
 ## Datasets
 
-The `Cora`, `Citeseer`, and `Pubmed` datasets can be download from  [here](https://github.com/tkipf/gcn/tree/master/gcn/data). Please place the downloaded files in the folder data_tf. The `ogbn-arxiv` dataset will be loaded automatically.
+The `Cora`, `Citeseer`, and `Pubmed` datasets can be download from  [here](https://github.com/tkipf/gcn/tree/master/gcn/data). Please place the downloaded files in the folder `data_tf`. The `ogbn-arxiv` dataset will be loaded automatically.
 
 ## Dependencies
 
