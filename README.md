@@ -23,7 +23,7 @@ The experimental results will be saved in the corresponding *.txt file.
 
     @inproceedigs{LGI-LS,
       title={Latent Graph Inference with Limited Supervision},
-      author={Jianglin Lu, Yi Xu, Huan Wang, Yue Bai, Yun FU},
+      author={Jianglin Lu, Yi Xu, Huan Wang, Yue Bai, Yun Fu},
       booktitle={Advances in Neural Information Processing Systems},
       year={2023}
     }
