@@ -1,0 +1,119 @@
+Epoch 0100: Test Loss 0.7103, Test Accuracy 0.7150
+Epoch 0200: Test Loss 0.7386, Test Accuracy 0.7170
+Epoch 0300: Test Loss 0.7514, Test Accuracy 0.7190
+Epoch 0400: Test Loss 0.7671, Test Accuracy 0.7230
+Epoch 0500: Test Loss 0.7695, Test Accuracy 0.7130
+Epoch 0600: Test Loss 0.7819, Test Accuracy 0.7160
+Epoch 0700: Test Loss 0.7770, Test Accuracy 0.7180
+Epoch 0800: Test Loss 0.8087, Test Accuracy 0.6960
+Epoch 0900: Test Loss 0.7899, Test Accuracy 0.7060
+Epoch 1000: Test Loss 0.7731, Test Accuracy 0.7310
+Epoch 1100: Test Loss 0.8043, Test Accuracy 0.6990
+Epoch 1200: Test Loss 0.7687, Test Accuracy 0.7320
+Epoch 1300: Test Loss 0.8118, Test Accuracy 0.6890
+Epoch 1400: Test Loss 0.7736, Test Accuracy 0.7330
+Epoch 1500: Test Loss 0.7970, Test Accuracy 0.7070
+Epoch 1600: Test Loss 0.8053, Test Accuracy 0.7010
+Epoch 1700: Test Loss 0.7937, Test Accuracy 0.7100
+Epoch 1800: Test Loss 0.7697, Test Accuracy 0.7270
+Epoch 1900: Test Loss 0.7871, Test Accuracy 0.7110
+Epoch 2000: Test Loss 0.7934, Test Accuracy 0.7200
+*******************************
+Trial 00: test accuracy 0.7390
+*******************************
+Epoch 0100: Test Loss 0.7020, Test Accuracy 0.7020
+Epoch 0200: Test Loss 0.7882, Test Accuracy 0.6800
+Epoch 0300: Test Loss 0.7773, Test Accuracy 0.6980
+Epoch 0400: Test Loss 0.8016, Test Accuracy 0.6890
+Epoch 0500: Test Loss 0.8162, Test Accuracy 0.6780
+Epoch 0600: Test Loss 0.8593, Test Accuracy 0.6670
+Epoch 0700: Test Loss 0.8106, Test Accuracy 0.6810
+Epoch 0800: Test Loss 0.8429, Test Accuracy 0.6760
+Epoch 0900: Test Loss 0.7895, Test Accuracy 0.7100
+Epoch 1000: Test Loss 0.7845, Test Accuracy 0.7020
+Epoch 1100: Test Loss 0.8374, Test Accuracy 0.6730
+Epoch 1200: Test Loss 0.8033, Test Accuracy 0.6930
+Epoch 1300: Test Loss 0.8221, Test Accuracy 0.6800
+Epoch 1400: Test Loss 0.7926, Test Accuracy 0.7110
+Epoch 1500: Test Loss 0.7947, Test Accuracy 0.7210
+Epoch 1600: Test Loss 0.8563, Test Accuracy 0.6770
+Epoch 1700: Test Loss 0.8136, Test Accuracy 0.6860
+Epoch 1800: Test Loss 0.7981, Test Accuracy 0.7040
+Epoch 1900: Test Loss 0.8299, Test Accuracy 0.6800
+Epoch 2000: Test Loss 0.8059, Test Accuracy 0.7030
+*******************************
+Trial 01: test accuracy 0.7330
+*******************************
+Epoch 0100: Test Loss 0.6826, Test Accuracy 0.7230
+Epoch 0200: Test Loss 0.7199, Test Accuracy 0.7320
+Epoch 0300: Test Loss 0.7448, Test Accuracy 0.7200
+Epoch 0400: Test Loss 0.7429, Test Accuracy 0.7240
+Epoch 0500: Test Loss 0.7656, Test Accuracy 0.7180
+Epoch 0600: Test Loss 0.7590, Test Accuracy 0.7290
+Epoch 0700: Test Loss 0.7821, Test Accuracy 0.7160
+Epoch 0800: Test Loss 0.7618, Test Accuracy 0.7300
+Epoch 0900: Test Loss 0.7957, Test Accuracy 0.6930
+Epoch 1000: Test Loss 0.7671, Test Accuracy 0.7250
+Epoch 1100: Test Loss 0.7917, Test Accuracy 0.6970
+Epoch 1200: Test Loss 0.8005, Test Accuracy 0.6950
+Epoch 1300: Test Loss 0.7812, Test Accuracy 0.7200
+Epoch 1400: Test Loss 0.7929, Test Accuracy 0.6950
+Epoch 1500: Test Loss 0.7900, Test Accuracy 0.7130
+Epoch 1600: Test Loss 0.7575, Test Accuracy 0.7280
+Epoch 1700: Test Loss 0.8469, Test Accuracy 0.6750
+Epoch 1800: Test Loss 0.7911, Test Accuracy 0.7160
+Epoch 1900: Test Loss 0.8070, Test Accuracy 0.6870
+Epoch 2000: Test Loss 0.7866, Test Accuracy 0.7120
+*******************************
+Trial 02: test accuracy 0.7390
+*******************************
+Epoch 0100: Test Loss 0.7018, Test Accuracy 0.7300
+Epoch 0200: Test Loss 0.7345, Test Accuracy 0.7300
+Epoch 0300: Test Loss 0.7316, Test Accuracy 0.7310
+Epoch 0400: Test Loss 0.7502, Test Accuracy 0.7370
+Epoch 0500: Test Loss 0.7608, Test Accuracy 0.7390
+Epoch 0600: Test Loss 0.7715, Test Accuracy 0.7300
+Epoch 0700: Test Loss 0.7656, Test Accuracy 0.7300
+Epoch 0800: Test Loss 0.7638, Test Accuracy 0.7320
+Epoch 0900: Test Loss 0.7529, Test Accuracy 0.7300
+Epoch 1000: Test Loss 0.7487, Test Accuracy 0.7330
+Epoch 1100: Test Loss 0.7658, Test Accuracy 0.7280
+Epoch 1200: Test Loss 0.7581, Test Accuracy 0.7310
+Epoch 1300: Test Loss 0.7613, Test Accuracy 0.7300
+Epoch 1400: Test Loss 0.7555, Test Accuracy 0.7370
+Epoch 1500: Test Loss 0.7663, Test Accuracy 0.7320
+Epoch 1600: Test Loss 0.7575, Test Accuracy 0.7330
+Epoch 1700: Test Loss 0.7633, Test Accuracy 0.7280
+Epoch 1800: Test Loss 0.7624, Test Accuracy 0.7290
+Epoch 1900: Test Loss 0.7734, Test Accuracy 0.7330
+Epoch 2000: Test Loss 0.7589, Test Accuracy 0.7300
+*******************************
+Trial 03: test accuracy 0.7490
+*******************************
+Epoch 0100: Test Loss 0.6871, Test Accuracy 0.7270
+Epoch 0200: Test Loss 0.7135, Test Accuracy 0.7310
+Epoch 0300: Test Loss 0.7260, Test Accuracy 0.7280
+Epoch 0400: Test Loss 0.7417, Test Accuracy 0.7290
+Epoch 0500: Test Loss 0.7533, Test Accuracy 0.7280
+Epoch 0600: Test Loss 0.7526, Test Accuracy 0.7280
+Epoch 0700: Test Loss 0.7634, Test Accuracy 0.7300
+Epoch 0800: Test Loss 0.7562, Test Accuracy 0.7280
+Epoch 0900: Test Loss 0.7828, Test Accuracy 0.7160
+Epoch 1000: Test Loss 0.7672, Test Accuracy 0.7310
+Epoch 1100: Test Loss 0.7921, Test Accuracy 0.6990
+Epoch 1200: Test Loss 0.7910, Test Accuracy 0.6910
+Epoch 1300: Test Loss 0.7679, Test Accuracy 0.7260
+Epoch 1400: Test Loss 0.8391, Test Accuracy 0.6760
+Epoch 1500: Test Loss 0.7827, Test Accuracy 0.7300
+Epoch 1600: Test Loss 0.7659, Test Accuracy 0.7320
+Epoch 1700: Test Loss 0.7711, Test Accuracy 0.7280
+Epoch 1800: Test Loss 0.7681, Test Accuracy 0.7260
+Epoch 1900: Test Loss 0.7758, Test Accuracy 0.7300
+Epoch 2000: Test Loss 0.8067, Test Accuracy 0.6870
+*******************************
+Trial 04: test accuracy 0.7410
+*******************************
+[0.7390000224113464, 0.7330000400543213, 0.7390000224113464, 0.7490000128746033, 0.7410000562667847]
+std of test accuracy 0.5153632355230239
+average of test accuracy 74.02000308036804
+Namespace(alpha=100.0, dataset='pubmed', dropout2=0.5, dropout_adj2=0.0, epochs=2000, half_train=0, half_val_as_train=0, hidden=32, k=15, klabel=30, knn_metric='cosine', lr=0.01, method='GCN_KNN_U', nlayers=2, normalization='sym', ntrials=5, patience=3000, sparse=0, w_decay=0.0005)

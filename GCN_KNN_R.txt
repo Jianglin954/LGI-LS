@@ -1,9 +1,109 @@
-Trial 00: test accuracy 0.7500
-Trial 01: test accuracy 0.7530
-Trial 02: test accuracy 0.7500
+Epoch 0100: Test Loss 0.6579, Test Accuracy 0.7220
+Epoch 0200: Test Loss 0.6608, Test Accuracy 0.7240
+Epoch 0300: Test Loss 0.6845, Test Accuracy 0.7210
+Epoch 0400: Test Loss 0.6724, Test Accuracy 0.7300
+Epoch 0500: Test Loss 0.6861, Test Accuracy 0.7370
+Epoch 0600: Test Loss 0.6820, Test Accuracy 0.7170
+Epoch 0700: Test Loss 0.6858, Test Accuracy 0.7330
+Epoch 0800: Test Loss 0.6767, Test Accuracy 0.7190
+Epoch 0900: Test Loss 0.7292, Test Accuracy 0.7250
+Epoch 1000: Test Loss 0.7002, Test Accuracy 0.7180
+Epoch 1100: Test Loss 0.6837, Test Accuracy 0.7270
+Epoch 1200: Test Loss 0.6879, Test Accuracy 0.7380
+Epoch 1300: Test Loss 0.6824, Test Accuracy 0.7350
+Epoch 1400: Test Loss 0.6979, Test Accuracy 0.7270
+Epoch 1500: Test Loss 0.6870, Test Accuracy 0.7280
+Epoch 1600: Test Loss 0.6959, Test Accuracy 0.7200
+Epoch 1700: Test Loss 0.6740, Test Accuracy 0.7390
+Epoch 1800: Test Loss 0.7175, Test Accuracy 0.7150
+Epoch 1900: Test Loss 0.6756, Test Accuracy 0.7420
+Epoch 2000: Test Loss 0.7083, Test Accuracy 0.7110
+Trial 00: test accuracy 0.7560
+Epoch 0100: Test Loss 0.6769, Test Accuracy 0.7280
+Epoch 0200: Test Loss 0.6874, Test Accuracy 0.7220
+Epoch 0300: Test Loss 0.6501, Test Accuracy 0.7420
+Epoch 0400: Test Loss 0.6929, Test Accuracy 0.7140
+Epoch 0500: Test Loss 0.6731, Test Accuracy 0.7300
+Epoch 0600: Test Loss 0.6721, Test Accuracy 0.7440
+Epoch 0700: Test Loss 0.7048, Test Accuracy 0.7350
+Epoch 0800: Test Loss 0.6762, Test Accuracy 0.7360
+Epoch 0900: Test Loss 0.7102, Test Accuracy 0.7180
+Epoch 1000: Test Loss 0.6769, Test Accuracy 0.7320
+Epoch 1100: Test Loss 0.6765, Test Accuracy 0.7490
+Epoch 1200: Test Loss 0.6901, Test Accuracy 0.7340
+Epoch 1300: Test Loss 0.7240, Test Accuracy 0.7080
+Epoch 1400: Test Loss 0.6887, Test Accuracy 0.7430
+Epoch 1500: Test Loss 0.7409, Test Accuracy 0.7280
+Epoch 1600: Test Loss 0.7067, Test Accuracy 0.7200
+Epoch 1700: Test Loss 0.7062, Test Accuracy 0.7440
+Epoch 1800: Test Loss 0.6860, Test Accuracy 0.7440
+Epoch 1900: Test Loss 0.7146, Test Accuracy 0.7130
+Epoch 2000: Test Loss 0.7018, Test Accuracy 0.7090
+Trial 01: test accuracy 0.7500
+Epoch 0100: Test Loss 0.6625, Test Accuracy 0.7320
+Epoch 0200: Test Loss 0.6824, Test Accuracy 0.7170
+Epoch 0300: Test Loss 0.6493, Test Accuracy 0.7540
+Epoch 0400: Test Loss 0.6645, Test Accuracy 0.7330
+Epoch 0500: Test Loss 0.6624, Test Accuracy 0.7410
+Epoch 0600: Test Loss 0.6703, Test Accuracy 0.7310
+Epoch 0700: Test Loss 0.6654, Test Accuracy 0.7330
+Epoch 0800: Test Loss 0.7169, Test Accuracy 0.7060
+Epoch 0900: Test Loss 0.7028, Test Accuracy 0.7230
+Epoch 1000: Test Loss 0.6906, Test Accuracy 0.7200
+Epoch 1100: Test Loss 0.7019, Test Accuracy 0.7170
+Epoch 1200: Test Loss 0.7104, Test Accuracy 0.7180
+Epoch 1300: Test Loss 0.6829, Test Accuracy 0.7300
+Epoch 1400: Test Loss 0.7041, Test Accuracy 0.7180
+Epoch 1500: Test Loss 0.7010, Test Accuracy 0.7320
+Epoch 1600: Test Loss 0.7160, Test Accuracy 0.7100
+Epoch 1700: Test Loss 0.7124, Test Accuracy 0.6930
+Epoch 1800: Test Loss 0.6834, Test Accuracy 0.7360
+Epoch 1900: Test Loss 0.6920, Test Accuracy 0.7250
+Epoch 2000: Test Loss 0.6994, Test Accuracy 0.7160
+Trial 02: test accuracy 0.7540
+Epoch 0100: Test Loss 0.6613, Test Accuracy 0.7230
+Epoch 0200: Test Loss 0.6541, Test Accuracy 0.7320
+Epoch 0300: Test Loss 0.6605, Test Accuracy 0.7360
+Epoch 0400: Test Loss 0.6551, Test Accuracy 0.7380
+Epoch 0500: Test Loss 0.6901, Test Accuracy 0.7230
+Epoch 0600: Test Loss 0.6752, Test Accuracy 0.7340
+Epoch 0700: Test Loss 0.7092, Test Accuracy 0.7130
+Epoch 0800: Test Loss 0.6749, Test Accuracy 0.7290
+Epoch 0900: Test Loss 0.7025, Test Accuracy 0.7100
+Epoch 1000: Test Loss 0.6850, Test Accuracy 0.7250
+Epoch 1100: Test Loss 0.7263, Test Accuracy 0.6990
+Epoch 1200: Test Loss 0.6876, Test Accuracy 0.7340
+Epoch 1300: Test Loss 0.6837, Test Accuracy 0.7360
+Epoch 1400: Test Loss 0.6937, Test Accuracy 0.7190
+Epoch 1500: Test Loss 0.6799, Test Accuracy 0.7400
+Epoch 1600: Test Loss 0.6909, Test Accuracy 0.7320
+Epoch 1700: Test Loss 0.6800, Test Accuracy 0.7260
+Epoch 1800: Test Loss 0.7063, Test Accuracy 0.7320
+Epoch 1900: Test Loss 0.6959, Test Accuracy 0.7300
+Epoch 2000: Test Loss 0.7676, Test Accuracy 0.6830
 Trial 03: test accuracy 0.7490
-Trial 04: test accuracy 0.7510
-[0.7500000596046448, 0.753000020980835, 0.7500000596046448, 0.7490000128746033, 0.7510000467300415]
-std of test accuracy 0.13564625939608194
-average of test accuracy 75.06000399589539
-Namespace(alpha=100.0, dataset='pubmed', dropout2=0.5, dropout_adj2=0.0, epochs=2000, half_train=0, half_val_as_train=0, hidden=32, k=15, klabel=30, knn_metric='cosine', lr=0.01, nlayers=2, normalization='sym', ntrials=5, patience=3000, sparse=0, w_decay=0.0005)
+Epoch 0100: Test Loss 0.6803, Test Accuracy 0.7200
+Epoch 0200: Test Loss 0.6718, Test Accuracy 0.7010
+Epoch 0300: Test Loss 0.6744, Test Accuracy 0.7130
+Epoch 0400: Test Loss 0.6971, Test Accuracy 0.7080
+Epoch 0500: Test Loss 0.6719, Test Accuracy 0.7350
+Epoch 0600: Test Loss 0.6789, Test Accuracy 0.7240
+Epoch 0700: Test Loss 0.6830, Test Accuracy 0.7290
+Epoch 0800: Test Loss 0.6752, Test Accuracy 0.7310
+Epoch 0900: Test Loss 0.6730, Test Accuracy 0.7290
+Epoch 1000: Test Loss 0.7089, Test Accuracy 0.7070
+Epoch 1100: Test Loss 0.6864, Test Accuracy 0.7290
+Epoch 1200: Test Loss 0.7054, Test Accuracy 0.6960
+Epoch 1300: Test Loss 0.6959, Test Accuracy 0.7250
+Epoch 1400: Test Loss 0.7100, Test Accuracy 0.7060
+Epoch 1500: Test Loss 0.6711, Test Accuracy 0.7380
+Epoch 1600: Test Loss 0.6958, Test Accuracy 0.7370
+Epoch 1700: Test Loss 0.6961, Test Accuracy 0.7180
+Epoch 1800: Test Loss 0.6886, Test Accuracy 0.7280
+Epoch 1900: Test Loss 0.6945, Test Accuracy 0.7220
+Epoch 2000: Test Loss 0.6933, Test Accuracy 0.7340
+Trial 04: test accuracy 0.7520
+[0.7560000419616699, 0.7500000596046448, 0.7540000081062317, 0.7490000128746033, 0.7520000338554382]
+std of test accuracy 0.25612493003552406
+average of test accuracy 75.22000312805176
+Namespace(alpha=100.0, dataset='pubmed', dropout2=0.5, dropout_adj2=0.0, epochs=2000, half_train=0, half_val_as_train=0, hidden=32, k=15, klabel=30, knn_metric='cosine', lr=0.01, method='GCN_KNN_R', nlayers=2, normalization='sym', ntrials=5, patience=3000, sparse=0, w_decay=0.0005)
