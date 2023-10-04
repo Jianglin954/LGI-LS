@@ -11,7 +11,7 @@ PLease refer to [SLAPS](https://github.com/BorealisAI/SLAPS-GNN/tree/main) for d
 
 ## Usage
 
-We provide `GCN+KNN_R` as an example due to its simpilicity and effectiveness. To test its performance on the `Pubmed` dataset, run the following command:
+We provide `GCN+KNN`, `GCN+KNN_U`, and `GCN+KNN_R` as examples due to their simpilicity and effectiveness. To test their performances on the `Pubmed` dataset, run the following command:
 
 ```bash
 bash experiments.sh
