@@ -13,7 +13,7 @@ conda activate LGI
 pip install torch==1.5.1 torchvision==0.6.1
 pip install scipy==1.2.1
 pip install scikit-learn==0.21.3
-pip install dgl==0.5.2
+pip install dgl-cu102==0.5.2
 pip install ogb==1.2.3
 wget https://data.pyg.org/whl/torch-1.5.0%2Bcu102/torch_scatter-2.0.5-cp37-cp37m-linux_x86_64.whl
 wget https://data.pyg.org/whl/torch-1.5.0%2Bcu102/torch_sparse-0.6.5-cp37-cp37m-linux_x86_64.whl
@@ -23,7 +23,7 @@ pip install torch_scatter-2.0.5-cp37-cp37m-linux_x86_64.whl
 pip install torch_sparse-0.6.5-cp37-cp37m-linux_x86_64.whl
 pip install torch_cluster-1.5.4-cp37-cp37m-linux_x86_64.whl
 pip install torch_spline_conv-1.2.0-cp37-cp37m-linux_x86_64.whl
-pip install pytorch-geometric==1.6.1
+pip install torch-geometric==1.6.1
 ```
 
 
