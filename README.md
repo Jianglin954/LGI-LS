@@ -5,15 +5,6 @@ Codes for the paper `Latent Graph Inference with Limited Supervision`.
 
 The `Cora`, `Citeseer`, and `Pubmed` datasets can be download from  [here](https://github.com/tkipf/gcn/tree/master/gcn/data). Please place the downloaded files in the folder `data_tf`. The `ogbn-arxiv` dataset will be loaded automatically.
 
-## Dependencies
-* `CUDA` version 10.2
-* `Python` version 3.7.2
-* [`PyTorch`](https://pytorch.org/get-started/previous-versions/) version 1.5.1
-* [`torch-geometric`](https://github.com/rusty1s/pytorch_geometric) 1.6.1
-* [`DGL`](https://www.dgl.ai/) version 0.5.2
-* [`ogb`](https://ogb.stanford.edu/) version 1.2.3
-* `Others` see Installation
-
 
 ## Installation
 ```bash
@@ -39,7 +30,7 @@ PLease refer to [SLAPS](https://github.com/BorealisAI/SLAPS-GNN/tree/main) for d
 
 ## Usage
 
-We provide `GCN+KNN`, `GCN+KNN_U`, and `GCN+KNN_R` as examples due to their simpilicity and effectiveness. To test their performances on the `Pubmed` dataset, run the following command:
+We provide `GCN+KNN`, `GCN+KNN_U`, and `GCN+KNN_R` as examples due to their simplicity and effectiveness. To test their performances on the `Pubmed` dataset, run the following command:
 
 ```bash
 bash experiments.sh
@@ -49,11 +40,18 @@ The experimental results will be saved in the corresponding *.txt file.
 
 # Reference
 
-    @inproceedigs{LGI-LS,
+    @inproceedigs{Jianglin2023LGI,
       title={Latent Graph Inference with Limited Supervision},
       author={Jianglin Lu, Yi Xu, Huan Wang, Yue Bai, Yun Fu},
       booktitle={Advances in Neural Information Processing Systems},
       year={2023}
+    }
+
+    @inproceedigs{fatemi2021slaps,
+      title={SLAPS: Self-Supervision Improves Structure Learning for Graph Neural Networks},
+      author={Fatemi, Bahare and Asri, Layla El and Kazemi, Seyed Mehran},
+      booktitle={Advances in Neural Information Processing Systems},
+      year={2021}
     }
 
 # Acknowledgement
