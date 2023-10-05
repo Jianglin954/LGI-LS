@@ -163,3 +163,75 @@ def load_citation_network_halftrain(dataset_str):
             train_mask[iii] = 0
 
     return features, nfeats, labels, nclasses, train_mask, val_mask, test_mask
+
+
+
+
+
+def load_citation_network_calculate_starved_nodes(dataset_str):
+    names = ['x', 'y', 'tx', 'ty', 'allx', 'ally', 'graph']
+    objects = []
+    for i in range(len(names)):
+        with open("data_tf/ind.{}.{}".format(dataset_str, names[i]), 'rb') as f:
+            if sys.version_info > (3, 0):
+                objects.append(pkl.load(f, encoding='latin1'))
+            else:
+                objects.append(pkl.load(f))
+    x, y, tx, ty, allx, ally, graph = tuple(objects)
+
+    num_vertices = len(graph)
+
+    adjacency = [[0 for j in range(num_vertices)] for i in range(num_vertices)]
+
+    for i in range(num_vertices):
+        for j in graph[i]:
+            adjacency[i][j] = 1
+
+    adjacency = np.array(adjacency)
+
+
+
+    test_idx_reorder = parse_index_file("data_tf/ind.{}.test.index".format(dataset_str))
+    test_idx_range = np.sort(test_idx_reorder)
+
+    if dataset_str == 'citeseer':
+        # Fix citeseer dataset (there are some isolated nodes in the graph)
+        # Find isolated nodes, add them as zero-vecs into the right position
+        test_idx_range_full = range(min(test_idx_reorder), max(test_idx_reorder) + 1)
+        tx_extended = sp.lil_matrix((len(test_idx_range_full), x.shape[1]))
+        tx_extended[test_idx_range - min(test_idx_range), :] = tx
+        tx = tx_extended
+        ty_extended = np.zeros((len(test_idx_range_full), y.shape[1]))
+        ty_extended[test_idx_range - min(test_idx_range), :] = ty
+        ty = ty_extended
+
+
+    features = sp.vstack((allx, tx)).tolil()
+    features[test_idx_reorder, :] = features[test_idx_range, :]
+
+    labels = np.vstack((ally, ty))
+    labels[test_idx_reorder, :] = labels[test_idx_range, :]
+    idx_test = test_idx_range.tolist()
+    idx_train = range(len(y))
+    idx_val = range(len(y), len(y) + 500)
+
+    train_mask = sample_mask(idx_train, labels.shape[0])
+    val_mask = sample_mask(idx_val, labels.shape[0])
+    test_mask = sample_mask(idx_test, labels.shape[0])
+
+    features = torch.FloatTensor(features.todense())
+    labels = torch.LongTensor(labels)
+    train_mask = torch.BoolTensor(train_mask)
+    val_mask = torch.BoolTensor(val_mask)
+    test_mask = torch.BoolTensor(test_mask)
+
+    nfeats = features.shape[1]
+    for i in range(labels.shape[0]):  
+        sum_ = torch.sum(labels[i])
+        if sum_ != 1:
+            labels[i] = torch.tensor([1, 0, 0, 0, 0, 0])
+    labels = (labels == 1).nonzero()[:, 1]
+    nclasses = torch.max(labels).item() + 1
+
+    return features, nfeats, labels, nclasses, train_mask, val_mask, test_mask, adjacency
+
