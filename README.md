@@ -1,5 +1,5 @@
 # LGI-LS (NeurIPS 2023)
-Codes for the paper `Latent Graph Inference with Limited Supervision`.
+Codes for the NeurIPS 2023 paper `Latent Graph Inference with Limited Supervision`.
 
 ## Datasets
 
@@ -26,7 +26,6 @@ pip install torch_spline_conv-1.2.0-cp37-cp37m-linux_x86_64.whl
 pip install pytorch-geometric==1.6.1
 ```
 
-PLease refer to [SLAPS](https://github.com/BorealisAI/SLAPS-GNN/tree/main) for details.
 
 ## Usage
 
