@@ -59,7 +59,7 @@
                 <a href="https://jianglin954.github.io/">Jianglin Lu</a><sup>1&ast;</sup>&#8192;
               </span>
 			  <span class="author-block">
-                <a href="https://sites.google.com/view/homepage-of-yi-xu">Yi Xu</a><sup>1</sup>
+                <a href="https://sites.google.com/view/homepage-of-yi-xu">Yi Xu</a><sup>1</sup>&#8192;
               </span>
               <span class="author-block">
                 <a href="https://huanwang.tech/">Huan Wang</a><sup>1</sup>&#8192;
@@ -79,7 +79,7 @@
             </div>
 
             <div style="font-size:15px">
-              <span><sup>&ast;</sup>Corresponding author: lu.jiang@northeastern.edu</span></br>
+              <span><sup>&ast;</sup>Corresponding author: <a href="mailto:jianglinlu@outlook.com">jianglinlu@outlook.com</a></span></br>
             </div>
 
             <div class="column has-text-centered">
@@ -150,7 +150,7 @@
 			We begin by defining the pivotal nodes as <i>k-hop starved nodes</i>, which can be identified based on a given adjacency matrix.
 			Considering the high computational burden, we further present a more efficient alternative inspired by <i>CUR matrix decomposition</i>. 
 			Subsequently, we eliminate the starved nodes by reconstructing the destroyed connections.
-			Extensive experiments on representative benchmarks demonstrate that reducing the starved nodes consistently improves the performance of state-of-the-art LGI methods, especially under extremely limited supervision (<strong>6.12%</strong> improvement on Pubmed with a labeling rate of only <strong>0.3%</strong>). 
+			Extensive experiments on representative benchmarks demonstrate that reducing the starved nodes consistently improves the performance of state-of-the-art LGI methods, especially under extremely limited supervision (6.12% improvement on Pubmed with a labeling rate of only 0.3%). 
           </div>
         </div>
       </div>
@@ -163,9 +163,29 @@
       <div class="columns is-centered">
         <div class="column is-full-width">
 
-          <!-- NeRF results: Blender -->
-          <h2 class="title is-3" align='center'>Random Weights Representative Capacity Exploration</h2>
-           
+          
+          <h2 class="title is-3" align='center'>Background</h2>
+		  <h3 class="title is-3" align='center'>Latent Graph Inference</h3>
+		  Given a graph $\mathcal{G}(\mathcal{V}, \mathbf{X} )$ containing $n$ nodes $\mathcal{V}=\{V_1, \ldots, V_n\}$ and a feature matrix $\mathbf{X} \in \mathbb{R}^{n\times d}$ with each row $\mathbf{X}_{i:} \in \mathbb{R}^d$ representing the $d$-dimensional attributes of node $V_i$, latent graph inference (LGI) aims to simultaneously learn the underlying graph topology encoded by an adjacency matrix $\mathbf{A} \in \mathbb{R}^{n\times n}$ and the discriminative $d'$-dimensional node representations $\mathbf{Z} \in \mathbb{R}^{n\times d'}$ based on $\mathbf{X}$, where the learned $\mathbf{A}$ and $\mathbf{Z}$ are jointly optimal for certain downstream tasks $\mathcal{T}$ given a specific loss function $\mathcal{L}$. 
+
+		  <h3 class="title is-3" align='center'>Supervision Starvation</h3>
+		
+		To illustrate the supervision starvation problem~\cite{SLAPS}, we consider a general LGI model $\mathcal{M}$ consisting of a latent graph generator $\mathcal{P}_{\mathbf{\Phi}}$ and a node encoder $\mathcal{F}_{\mathbf{\Theta}}$. 
+		For simplicity, we ignore the activation function and assume that $\mathcal{F}_{\mathbf{\Theta}}$ is implemented using a $1$-layer GNN, \textit{i.e.}, $\mathcal{F}_{\mathbf{\Theta}}=\mathtt{GNN}_1(\mathbf{X}, \mathbf{A}; \mathbf{\Theta})$, where $\mathbf{A}=\mathcal{P}_{\mathbf{\Phi}}(\mathbf{X})$. 
+		For each node $\mathbf{X}_{i:}$, the corresponding node representation $\mathbf{Z}_{i:}$ learned by the model $\mathcal{M}$ can be expressed as:
+		\begin{equation}
+		\mathbf{Z}_{i:} = \mathbf{A}_{i:}\mathbf{X}\mathbf{\Theta} = \left(\sum_{j \in \Omega} \mathbf{A}_{ij}\mathbf{X}_{j:} \right)\mathbf{\Theta},
+		\end{equation}
+		where $\Omega=\{j\ |\  \mathbbm{1}_{\mathbb{R}^+}(\mathbf{A})_{ij}=1 \}$ and $\mathbf{A}_{ij}=\mathcal{P}_{\mathbf{\Phi}}(\mathbf{X}_{i:}, \mathbf{X}_{j:})$. Consider the node classification loss:
+		\begin{equation}
+		\min_{\mathbf{A}, \mathbf{\Theta}} \mathcal{L} = \sum_{i\in \mathcal{Y}_{L}} \sum_{j=1}^{|\mathcal{C}|} \mathbf{Y}_{ij} \ln \mathbf{Z}_{ij} = \sum_{i\in \mathcal{Y}_{L}} \mathbf{Y}_{i:} \ln \mathbf{Z}_{i:}^{\top} = \sum_{i\in \mathcal{Y}_{L}} \mathbf{Y}_{i:} \ln \left( \left(\sum_{j \in \Omega} \mathbf{A}_{ij}\mathbf{X}_{j:} \right)\mathbf{\Theta}\right)^\top,
+		\end{equation} 
+		where $\mathcal{Y}_{L}$ represents the set of indexes of labeled nodes and $|\mathcal{C}|$ denotes the size of label set. 
+		For $\forall i\in \mathcal{Y}_{L}$, $j \in \Omega$, $\mathbf{A}_{ij}$ is optimized via backpropagation under the supervision of label $\mathbf{Y}_{i:}$. 
+		For $\forall i \notin \mathcal{Y}_{L}$, however, if $j \notin \mathcal{Y}_{L}$ for $\forall j \in \Omega$, $\mathbf{A}_{ij}$ will receive no supervision from any label and, as a result, cannot be semantically optimal after training. 
+		Consequently, the learning models exhibit poor generalization as the predictions of testing nodes inevitably rely on these supervision-starved weights. 
+		This phenomenon is referred to as \textit{supervision starvation} (SS), where many edge weights are learned without any label supervision. 
+		It is easy to infer that this issue also persists in a $k$-layer GNN. 
 
           <p align="center">
             <table><tr>
@@ -219,12 +239,12 @@ compared with baselines. In very high compression ratios, we can still maintain 
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>@article{bai2022parameter,
-  title={Parameter-Efficient Masking Networks},
-  author={Bai, Yue and Wang, Huan and Ma, Xu and Zhang, Yitian and Tao, Zhiqiang and Fu, Yun},
-  journal={arXiv preprint arXiv:2210.06699},
-  year={2022}
-}
+      <pre><code>@inproceedigs{Jianglin2023LGI,
+	title={Latent Graph Inference with Limited Supervision},
+	author={Jianglin Lu, Yi Xu, Huan Wang, Yue Bai, Yun Fu},
+	booktitle={Advances in Neural Information Processing Systems},
+	year={2023}
+  }
 </code></pre>
     </div>
   </section>
