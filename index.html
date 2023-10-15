@@ -199,13 +199,17 @@ Therefore, we believe that employing a deeper GNN is not the optimal solution to
 
           <p align="center">
             <table><tr>
-            <td><a><img src="./static/images/fig1.jpg"  height="100" ></a></td>
+            <td><a><img src="./static/images/table1.jpg"  height="100" ></a></td>
             </tr><table>
           </p>
-    Performances of ConvMixer (top row) and ViT (bottom row) backbones on CIFAR10 dataset with different model hyperparameters. Y-axis represent the test accuracy and X-axis denotes different network parameter settings. Dense means the model is trained in regular fashion. Mask is the sparse selection strategy.
-One-layer, MP, and RP are our strategies. The decimal after RP means the number of unique
-parameters compared with MP. From Mask to RP 1e-5, the unique values of network decrease.
-Different experimental settings illustrate the representative potential of random weights.
+		  <p align="center">
+            <table><tr>
+            <td><a><img src="./static/images/GCNKNN.pdf"  height="100" ></a></td>
+			<td><a><img src="./static/images/GRCN.pdf"  height="100" ></a></td>
+			<td><a><img src="./static/images/SLAPS.pdf"  height="100" ></a></td>
+            </tr><table>
+          </p>
+    Performances 
           </br>
           </br>
           </br>
@@ -219,13 +223,7 @@ Different experimental settings illustrate the representative potential of rando
             <td><a><img src="figs/plot_cifar100_resnet.svg"  height="100" ></a></td>
             </tr><table>
           </p>
-    Compression performance validation on CIFAR10 (left) and CIFAR100 (right) datasets on
-ResNet32/ResNet56 backbones. Y-axis denotes the test accuracy. X-axis means the network size
-compression ratio. Different colors represent different network architectures. The straight lines on the
-top are performance of dense model with regular training. Lines with different symbol shapes denote
-different settings. For ResNet, our three points are based on MP, RP 1e-1, and RP 1e-2, respectively.
-This pair of figures show that our proposed paradigm achieves admirable compression performance
-compared with baselines. In very high compression ratios, we can still maintain the test accuracy.
+    Compression 
 
           
 
