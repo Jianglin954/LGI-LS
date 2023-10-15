@@ -1,8 +1,11 @@
 # LGI-LS (NeurIPS 2023)
 Codes for the NeurIPS 2023 paper `Latent Graph Inference with Limited Supervision`.
+
 [Project page](https://jianglin954.github.io/LGI-LS/)
 
-<img scr="https://github.com/Jianglin954/LGI-LS/blob/main/static/images/fig2.jpg" width="200" > <img scr="https://github.com/Jianglin954/LGI-LS/blob/main/static/images/fig3.jpg" width="200" ><img scr="https://github.com/Jianglin954/LGI-LS/blob/main/static/images/fig4.jpg" width="200">
+<p align="center">
+<img scr="https://github.com/Jianglin954/LGI-LS/blob/main/static/images/fig2.jpg" height="120px" > <img scr="https://github.com/Jianglin954/LGI-LS/blob/main/static/images/fig3.jpg" height="120px" ><img scr="https://github.com/Jianglin954/LGI-LS/blob/main/static/images/fig4.jpg" height="120px">
+</p>
 
 ## Datasets
 
