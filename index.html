@@ -1,247 +1,253 @@
-
+===
 <!DOCTYPE html>
-<!-- saved from url=(0040)http://artemsheludko.pw/flexible-jekyll/ -->
-<html lang="en">
+<html>
 
-
-	
 <head>
-	
-<script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?1833684faf5f254c1bb31386c5780c57";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
+  <meta charset="utf-8">
+  <meta name="description" content="Latent Graph Inference with Limited Supervision">
+  <meta name="keywords" content="Graph Neural Networks, Graph Structure Learning, Limited Supervision">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Latent Graph Inference with Limited Supervision</title>
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>Jianglin Lu-卢江林</title>
-        <link rel="shortcut icon" href="img/jianglin.png"/>
-        <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-	<meta name="keywords" content="Jianglin Lu, Northeastern University">
-	<meta name="description" content="Jianglin Lu's home page">
-	<link rel="stylesheet" href="./css/jemdoc.css">
-	<title>Jianglin Lu, Northeastern Unversity</title>
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_HTML" async></script>
 </head>
 
 <body>
- <div id="layout-content" style="margin-top:25px">
 
-	
-<table>
-	<tbody>
-		<tr>
-			<td width="670">
-				<div id="toptitle">					
-					<h1>Jianglin Lu &nbsp 卢江林 </h1></div>
-				<h3 style="font-weight:normal"><a href="https://scholar.google.com/citations?user=H8_Rl5UAAAAJ&hl=en&oi=ao">Google Scholar </a> &nbsp <a href="https://dblp.uni-trier.de/pid/252/0023.html">DBLP</a> &nbsp <a href="https://github.com/Jianglin954">Github</a>  </h3>
-				<p>
-					SMILE Lab, <br>
-					Department of ECE, <br>
-					College of Engineering, <br>
-					Northeastern University, <br>
-					360 Huntington Avenue, Boston, MA 02115, USA <br>
-					<br>
-					Email: <a href="mailto:jianglinlu@outlook.com">jianglinlu <strong>at</strong> outlook <strong>dot</strong> com</a> 				       
-				</p>
-			</td>
-			<td>
-				<a href="https://jianglin954.github.io/"><img src="img/Jianglin.png" alt="Jianglin" border="0" width="400"></a>
-			</td>
-		</tr>
-	</tbody>
-</table>
-
-
-     <h2>Biography</h2>
-    <div id="news-content" >
-	  <span>Jianglin Lu is a first-year Ph.D. student in the <a href="https://web.northeastern.edu/smilelab/">SMILE Lab</a> of the
-		  <a href="https://ece.northeastern.edu/">Department of ECE</a>,
-		  <a href="https://www.northeastern.edu/">Northeastern University (NEU)</a>,
-		  under the supervision of <a href="http://www1.ece.neu.edu/~yunfu/">Prof. Yun Raymond Fu</a>.
-
-		  His research interests mainly include computer vision, machine learning, and data mining.
-	  </span> <br>
-	  <span></span>
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
     </div>
+    <div class="navbar-menu">
+      <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+        <a class="navbar-item" href="https://github.com/yueb17/PEMN">
+          <span class="icon">
+            <i class="fas fa-home"></i>
+          </span>
+        </a>
 
+      </div>
 
-     
- <tr><tr>
-
-	 
-	 
-<div style="margin-top: 10px"></div>
-     <h2>Selected Publications </h2>
-
-
-	
-	<table id="tbPublications" width="100%">
-	<tbody>
-	<h3>Conference </h3>
-
-		<tr>
-			<td><strong><a href="" target="_blank">Latent Graph Inference with Limited Supervision.</a></strong>
-				[<a href="https://jianglin954.github.io/Awesome-papers-in-the-fileds-of-CV-ML-PR-DM/files/LGI.pdf">PDF</a>][<a href="https://github.com/Jianglin954/LGI-LS">Code</a>]<br>
-			<p ><strong>Jianglin Lu</strong>, Yi Xu, Huan Wang, Yue Bai, Yun Fu. </p>
-			   <p style="margin-top: -11px"><i>Neural Information Processing Systems (<strong>NeurIPS</strong>), 2023.
-		<tr></tr>
-		<tr></tr>
-		<tr></tr>
-
-		<tr>
-			<!--<td width="206">
-			<img src="img/ICPR2020.png" width="185px" height = "95" style="box-shadow: 4px 4px 8px #888">
-			</td>-->
-			<td><strong><a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9412142" target="_blank">Label Self-Adaption Hashing for Image Retrieval.</a></strong>
-				[<a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9412142">PDF</a>]
-				[<a href="https://github.com/Jianglin954/ICPR-2020-LSAH-Codes">Code</a>]<br>
-			<p ><strong>Jianglin Lu</strong>, Zhihui Lai, Jingxu Lin, Qinghong Lin, Jie Zhou.</p>
-			   <p style="margin-top: -11px"><i>International Conference on Pattern Recognition (<strong>ICPR</strong>), 2020.
-		<tr></tr>
-		<tr></tr>
-		<tr></tr>
-					
-		<tr>
-			 <!-- <td width="206">
-			<img src="img/IJCAI2022.png" width="185px" height = "95" style="box-shadow: 4px 4px 8px #888">
-			</td> -->
-			<td><strong><a href="https://doi.org/10.24963/ijcai.2022/201" target="_blank">Uncertainty-Guided Pixel Contrastive Learning for Semi-Supervised Medical Image Segmentation.</a></strong>
-				[<a href="https://doi.org/10.24963/ijcai.2022/201">PDF</a>][<a href="https://github.com/taovv/UGPCL">Code</a>]<br>
-			<p >Tao Wang, <strong>Jianglin Lu</strong>, Zhihui Lai, Heng Kong, Jiajun Wen. </p>
-			   <p style="margin-top: -11px"><i>International Joint Conference on Artificial Intelligence (<strong>IJCAI</strong>), 2022.
-		<tr></tr>
-		<tr></tr>
-		<tr></tr>
-
-		<tr>
-			<!--<td width="206">
-			<img src="img/ACMMM2021.png" width="185px" height = "95" style="box-shadow: 4px 4px 8px #888">
-			</td>-->
-			<td><strong><a href="https://dl.acm.org/doi/10.1145/3474085.3475346" target="_blank">Local Graph Convolutional Networks for Cross-Modal Hashing.</a></strong>
-				[<a href="https://dl.acm.org/doi/10.1145/3474085.3475346">PDF</a>][<a href="https://github.com/chenyd7/LGCNH">Code</a> ]<br>
-			<p >Yudong Chen, Sen Wang, <strong>Jianglin Lu</strong>, Zhi Chen, Zheng Zhang, Zi Huang.</p>
-			   <p style="margin-top: -11px"><i>ACM International Conference on Multimedia (<strong>ACM MM</strong>), 2021.
-		<tr></tr>
-		<tr></tr>
-		<tr></tr>
-
-	</tbody>
-	</table>
-
-
-	
-	<table id="tbPublications" width="100%">
-	<tbody>
-	<h3>Journal</h3>					   
-		 <tr>
-			<td><strong><a href="https://ieeexplore.ieee.org/document/10015100" target="_blank">Asymmetric Transfer Hashing with Adaptive Bipartite Graph Learning.</a></strong>
-				[<a href="https://ieeexplore.ieee.org/document/10015100">PDF</a>]
-				[<a href="https://github.com/Jianglin954/ATH-Codes">Code</a>]<br>
-			<p ><strong>Jianglin Lu</strong>, Jie Zhou, Yudong Chen, Witold Pedrycz, Kwok-Wai Hung.</p>
-			   <p style="margin-top: -11px"><i>IEEE Transactions on Cybernetics (<strong>TCYB</strong>), 2023.
-		<tr></tr>
-		<tr></tr>
-		<tr></tr>
-
-		<tr>
-
-			<td><strong><a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9248650" target="_blank">Generalized Embedding Regression: A Framework for Supervised Feature Extraction.</a></strong>
-				[<a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9248650">PDF</a>]
-				[<a href="https://github.com/Jianglin954/TNNLS-2022-GER-Codes">Code</a>]<br>
-			<p ><strong>Jianglin Lu</strong>,  Zhihui Lai, Hailing Wang, Yudong Chen, Jie Zhou, Linlin Shen.</p>
-			   <p style="margin-top: -11px"><i>IEEE Transactions on Neural Networks and Learning Systems (<strong>TNNLS</strong>), 2022.
-		<tr></tr>
-		<tr></tr>
-		<tr></tr>
-
-		<tr>
-			<td><strong><a href="https://www.sciencedirect.com/science/article/pii/S0031320320305616?via%3Dihub" target="_blank">Low-Rank Adaptive Graph Embedding for Unsupervised Feature Extraction.</a></strong>
-				[<a href="https://www.sciencedirect.com/science/article/pii/S0031320320305616?via%3Dihub">PDF</a>]
-				[<a href="https://github.com/Jianglin954/PR-2021-LRAGE-Codes">Code</a>]<br>
-			<p ><strong>Jianglin Lu</strong>, Hailing Wang, Jie Zhou, Yudong Chen, Zhihui Lai, Qinghua Hu.</p>
-			   <p style="margin-top: -11px"><i>Pattern Recognition (<strong>PR</strong>), 2021.
-		<tr></tr>
-		<tr></tr>
-		<tr></tr>
-
-		<tr>
-			<!--<td width="206">
-			<img src="img/INS2021.png" width="185px" height = "95" style="box-shadow: 4px 4px 8px #888">
-			</td>-->
-			<td><strong><a href="https://www.sciencedirect.com/science/article/pii/S0020025520308288?via%3Dihub" target="_blank">Target Redirected Regression with Dynamic Neighborhood Structure.</a></strong>
-				[<a href="https://www.sciencedirect.com/science/article/pii/S0020025520308288?via%3Dihub">PDF</a>]
-				[<a href="https://github.com/Jianglin954/INS-2021-RLRRP-Codes">Code</a>]<br>
-			<p ><strong>Jianglin Lu</strong>, Jingxu Lin, Zhihui Lai, Hailing Wang, Jie Zhou.</p>
-			   <p style="margin-top: -11px"><i>Information Sciences (<strong>INS</strong>), 2021.
-		<tr></tr>
-		<tr></tr>
-		<tr></tr>
-
-		<tr>
-			 <!--<td width="206">
-			<img src="img/INS2022.png" width="185px" height = "95" style="box-shadow: 4px 4px 8px #888">
-			</td>-->
-			<td><strong><a href="https://www.sciencedirect.com/science/article/abs/pii/S0020025521013335?via%3Dihub" target="_blank">Deep Asymmetric Hashing with Dual Semantic Regression and Class Structure Quantization.</a></strong>
-			[<a href="https://www.sciencedirect.com/science/article/abs/pii/S0020025521013335?via%3Dihub">PDF</a>]<br>
-			<p ><strong>Jianglin Lu</strong>, Hailing Wang, Jie Zhou, Mengfan Yan, Jiajun Wen.</p>
-			   <p style="margin-top: -11px"><i>Information Sciences (<strong>INS</strong>), 2022.
-		<tr></tr>
-		<tr></tr>
-		<tr></tr>
-
-		<tr>
-			 <!--<td width="206">
-			<img src="img/TOMM2022.png" width="185px" height = "95" style="box-shadow: 4px 4px 8px #888">
-			</td>-->
-			<td><strong><a href="https://dl.acm.org/doi/10.1145/3477538" target="_blank">Deep Semantic and Attentive Network for Unsupervised Video Summarization.</a></strong>
-				[<a href="https://dl.acm.org/doi/10.1145/3477538">PDF</a>]<br>
-			<p >Shenghua Zhong, Jingxu Lin, <strong>Jianglin Lu</strong>, Ahmed Fares, Tongwei Ren.</p>
-			   <p style="margin-top: -11px"><i>ACM Transactions on Multimedia Computing, Communications, and Applications (<strong>TOMM</strong>), 2022.
-		<tr></tr>
-		<tr></tr>
-		<tr></tr>
-
-
-	</tbody>
-	</table>
-
-
-	 
-	 <!--
-      <h2><strong>Professional Services</strong></h2>
-   <div>
-	<strong>Journal Reviewer for:</strong>
-	   IEEE Transactions on Image Processing, Pattern Recognition, International Journal of Machine Learning and Cybernetics, etc. <br>
-	   
-	 <strong>Conference Reviewer for:</strong> IEEE International Joint Conference on Neural Network.
     </div>
-    -->							
+  </nav>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Latent Graph Inference with Limited Supervision</h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="https://yueb17.github.io/">Jianglin Lu</a><sup>1&ast;</sup>&#8192;
+              </span>
+			  <span class="author-block">
+                <a href="https://sites.google.com/view/homepage-of-yi-xu">Yi Xu</a><sup>1</sup>
+              </span>
+              <span class="author-block">
+                <a href="https://huanwang.tech/">Huan Wang</a><sup>1</sup>&#8192;
+              </span>
+              <span class="author-block">
+                <a href="https://yueb17.github.io/">Yue Bai</a><sup>1,</sup>&#8192;
+              </span>
+              <span class="author-block">
+                <a href="http://www1.ece.neu.edu/~yunfu/">Yun Fu</a><sup>1,2</sup>&#8192;
+              </span>
+            </div>
+            <h1 style="font-size:23px;font-weight:bold">NeurIPS 2023</h1>
+
+            <div class="is-size-5 publication-authors">
+              <span><sup>1</sup>Department of Electrical and Computer Engineering, Northeastern University&#8192;</span><br>
+              <span><sup>2</sup>Khoury College of Computer Science, Northeastern University</span><br>
+            </div>
+
+            <div style="font-size:15px">
+              <span><sup>&ast;</sup>Corresponding author: lu.jiang@northeastern.edu</span></br>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- PDF Link. -->
+                <span class="link-block">
+                  <a href="https://openreview.net/forum?id=tGuMwFnRZX"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Openreview</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="https://arxiv.org/pdf/2310.04314.pdf" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>ArXiv</span>
+                  </a>
+                </span>
+                <!-- Code Link. -->
+                <span class="link-block">
+                  <a href="https://github.com/Jianglin954/LGI-LS"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <div align='center'>
+          <a><img src="figs/main_figure_cr.svg"  height="200" ></a>
+        </div>
+        <div class="content has-text-justified">
+          Left is the conventional fashion where weights are optimized and sparse structures
+are decided by certain criteria. Right is our PEMN to represent a network where the prototype weights
+are fixed and repetitively used to fill in the whole network and different masks are learned to deliver
+different feature mappings. Following this line, we explore the representative potential of random
+weights and propose a novel paradigm to achieve model compression by combining a set of random
+weights and a bunch of masks. Different features mappings are shown as blue rectangles. Squares with different color patches inside serve as parameters of
+different layers.  
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+			Latent graph inference (LGI) aims to jointly learn the underlying graph structure and node representations from data features. 
+			However, existing LGI methods commonly suffer from the issue of <i>supervision starvation</i>, where massive edge weights are learned without semantic supervision and do not contribute to the training loss.
+			Consequently, these supervision-starved weights, which may determine the predictions of testing samples, cannot be semantically optimal, resulting in poor generalization.  
+			In this paper, we observe that this issue is actually caused by the graph sparsification operation, which severely destroys the important connections established between pivotal nodes and labeled ones.
+			To address this, we propose to <i>restore the corrupted affinities and replenish the missed supervision for better LGI</i>.
+			The key challenge then lies in identifying the critical nodes and recovering the corrupted affinities.
+			We begin by defining the pivotal nodes as <i>$k$-hop starved nodes</i>, which can be identified based on a given adjacency matrix.
+			Considering the high computational burden, we further present a more efficient alternative inspired by <i>CUR matrix decomposition</i>. 
+			Subsequently, we eliminate the starved nodes by reconstructing the destroyed connections.
+			Extensive experiments on representative benchmarks demonstrate that reducing the starved nodes consistently improves the performance of state-of-the-art LGI methods, especially under extremely limited supervision (\textbf{6.12\%} improvement on Pubmed with a labeling rate of only \textbf{0.3\%}). 
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+
+          <!-- NeRF results: Blender -->
+          <h2 class="title is-3" align='center'>Random Weights Representative Capacity Exploration</h2>
+           
+
+          <p align="center">
+            <table><tr>
+            <td><a><img src="figs/plot_convmixer_d6.svg"  height="100" ></a></td>
+            <td><a><img src="figs/plot_convmixer_d8.svg"  height="100" ></a></td>
+            </tr><table>
+            </br>
+            <table><tr>
+            <td><a><img src="figs/plot_vit_d6.svg"  height="100" ></a></td>
+            <td><a><img src="figs/plot_vit_d8.svg"  height="100" ></a></td>
+            </tr><table>
+            </br>
+          </p>
+    Performances of ConvMixer (top row) and ViT (bottom row) backbones on CIFAR10 dataset with different model hyperparameters. Y-axis represent the test accuracy and X-axis denotes different network parameter settings. Dense means the model is trained in regular fashion. Mask is the sparse selection strategy.
+One-layer, MP, and RP are our strategies. The decimal after RP means the number of unique
+parameters compared with MP. From Mask to RP 1e-5, the unique values of network decrease.
+Different experimental settings illustrate the representative potential of random weights.
+          </br>
+          </br>
+          </br>
+
+          <h2 class="title is-3" align='center'>A New Network Compression Paradigm</h2>
+           
+
+          <p align="center">
+            <table><tr>
+            <td><a><img src="figs/plot_cifar10_resnet.svg"  height="100" ></a></td>
+            <td><a><img src="figs/plot_cifar100_resnet.svg"  height="100" ></a></td>
+            </tr><table>
+          </p>
+    Compression performance validation on CIFAR10 (left) and CIFAR100 (right) datasets on
+ResNet32/ResNet56 backbones. Y-axis denotes the test accuracy. X-axis means the network size
+compression ratio. Different colors represent different network architectures. The straight lines on the
+top are performance of dense model with regular training. Lines with different symbol shapes denote
+different settings. For ResNet, our three points are based on MP, RP 1e-1, and RP 1e-2, respectively.
+This pair of figures show that our proposed paradigm achieves admirable compression performance
+compared with baselines. In very high compression ratios, we can still maintain the test accuracy.
+
+          
+
+        
+        </div>
+      </div>
+    </div>
+  </section>
 
 
 
-	<script type="text/javascript" src="//rf.revolvermaps.com/0/0/6.js?i=5s98u118kjk&amp;m=7&amp;c=e63100&amp;cr1=ffffff&amp;f=arial&amp;l=0&amp;bv=90&amp;lx=-420&amp;ly=420&amp;hi=20&amp;he=7&amp;hc=a8ddff&amp;rs=80" async="async"></script>
 
 
-	<div id="footer">
-		<div align="center" style="margin:auto;padding-top:10px">
-		<br>
-		&copy; Jianglin Lu | <span>Last updated: Oct 01, 2023</span>
-		</div>
-	</div>
-			
-	<div style="display:none">
-		<h2 id="flag2"> </h2> 
-		<a href="https://info.flagcounter.com/bXN6"><img src="https://s05.flagcounter.com/count2/bXN6/bg_FFFFFF/txt_000000/border_CCCCCC/columns_8/maxflags_12/viewers_0/labels_1/pageviews_1/flags_0/percent_0/" alt="Flag Counter" border="0"></a>
-	</div>	
-			
-
-			
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@article{bai2022parameter,
+  title={Parameter-Efficient Masking Networks},
+  author={Bai, Yue and Wang, Huan and Ma, Xu and Zhang, Yitian and Tao, Zhiqiang and Fu, Yun},
+  journal={arXiv preprint arXiv:2210.06699},
+  year={2022}
+}
+</code></pre>
+    </div>
+  </section>
 
 
-  </div>
 
-</body></html>
+  <footer class="footer">
+    <div align="center" class="container">
+      <div class="columns is-centered">
+        <div class="content">
+          This website is borrowed from <a href="https://github.com/nerfies/nerfies.github.io">nerfies</a>.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
