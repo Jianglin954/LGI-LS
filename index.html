@@ -24,7 +24,7 @@
   <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=AM_HTMLorMML-full"></script>
 </head>
 
-<body>
+<body width: 75%;>
 
   <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
@@ -36,7 +36,7 @@
     </div>
     <div class="navbar-menu">
       <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-        <a class="navbar-item" href="https://github.com/yueb17/PEMN">
+        <a class="navbar-item" href="https://github.com/Jianglin954/LGI-LS">
           <span class="icon">
             <i class="fas fa-home"></i>
           </span>
@@ -173,6 +173,10 @@ Therefore, we believe that employing a deeper GNN is not the optimal solution to
 
 		  <h2 class="title is-3" align='center'>Latent Graph Inference</h2>
 		  Given a graph $\mathcal{G}(\mathcal{V}, \mathbf{X} )$ containing $n$ nodes $\mathcal{V}=\{V_1, \ldots, V_n\}$ and a feature matrix $\mathbf{X} \in \mathbb{R}^{n\times d}$ with each row $\mathbf{X}_{i:} \in \mathbb{R}^d$ representing the $d$-dimensional attributes of node $V_i$, latent graph inference (LGI) aims to simultaneously learn the underlying graph topology encoded by an adjacency matrix $\mathbf{A} \in \mathbb{R}^{n\times n}$ and the discriminative $d'$-dimensional node representations $\mathbf{Z} \in \mathbb{R}^{n\times d'}$ based on $\mathbf{X}$, where the learned $\mathbf{A}$ and $\mathbf{Z}$ are jointly optimal for certain downstream tasks $\mathcal{T}$ given a specific loss function $\mathcal{L}$. 
+
+		</br>
+		</br>
+		</br>
 
 		  <h2 class="title is-3" align='center'>Supervision Starvation</h2>
 		
