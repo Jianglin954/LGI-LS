@@ -3,8 +3,11 @@ Codes for the NeurIPS 2023 paper `Latent Graph Inference with Limited Supervisio
 
 [Project page](https://jianglin954.github.io/LGI-LS/)
 
+<!-- 
 ![image](https://github.com/Jianglin954/LGI-LS/blob/main/static/images/fig2.jpg)![image](https://github.com/Jianglin954/LGI-LS/blob/main/static/images/fig3.jpg)![image](https://github.com/Jianglin954/LGI-LS/blob/main/static/images/fig4.jpg)
-<img scr="https://github.com/Jianglin954/LGI-LS/blob/main/static/images/fig2.jpg" width="120px">
+-->
+
+
 
 ## Datasets
 
@@ -60,3 +63,7 @@ The experimental results will be saved in the corresponding *.txt file.
 
 # Acknowledgement
 Our codes are mainly based on [SLAPS](https://github.com/BorealisAI/SLAPS-GNN/tree/main). For other comparison methods, please refer to their publicly available code repositories. We gratefully thank the authors for their contributions. 
+
+
+<img scr="https://github.com/Jianglin954/LGI-LS/blob/main/static/images/fig2.jpg" width="120px">
+<img scr="https://github.com/Jianglin954/LGI-LS/blob/main/static/images/fig2.jpg" width="120px"><img scr="https://github.com/Jianglin954/LGI-LS/blob/main/static/images/fig2.jpg" width="120px">
