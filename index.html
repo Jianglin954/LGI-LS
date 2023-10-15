@@ -139,83 +139,8 @@
     </div>
   </section>
 
-  <section class="hero teaser">
-    <div class="container is-max-desktop">
-      <div class="hero-body">
-        <div align='center'>
-		
-			<p align="center">
-				<table><tr>
-				<td><a><img src="./static/images/fig5.jpg"  width="400" ></a></td>
-				<td>\begin{equation} \qquad\quad \end{equation}</td>
-				<td>
-					\begin{equation}   
-			\mathbf{A}: \begin{array}{lll}
-			& \begin{array}{llllll}\ \  1 & 2 & 3 & 4 & 5 & 6 \end{array} & \\
-			\begin{array}{l}  1 \\ 2 \\ 3 \\ 4 \\ 5 \\ 6 \end{array}&
-			\left[\begin{array}{llllll}
-				1 & 0 & 1 & 0 & 1 & 0 \\  
-				0 & 1 & 1 & 1 & 0 & 0 \\ 
-				1 & 1 & 1 & 0 & 0 & 1 \\ 
-				0 & 1 & 0 & 1 & 0 & 0 \\ 
-				1 & 0 & 0 & 0 & 1 & 0 \\ 
-				0 & 0 & 1 & 0 & 0 & 1 \\ 
-			\end{array}\right]
-			\begin{array}{l}  
-			\end{array}
-		\end{array} \nonumber
-		\end{equation}
-				</td>
-				</tr><table>
-			</p>
-
-			\begin{equation}   
-			\mathbf{C} : \begin{array}{lll}
-			& \begin{array}{ll}\ \ \  2 & 4 \end{array} & \\
-			\begin{array}{l}  1 \\ 2 \\ 3 \\ 4 \\ 5 \\ 6 \end{array}&
-			\left[\begin{array}{llll}
-			0  & 0  \\  
-			1  & 1  \\ 
-			1  & 0  \\ 
-			1  & 1  \\ 
-			0  & 0  \\ 
-			0  & 0  \\ 
-			\end{array}\right]
-			\end{array}; \quad\qquad
-			\mathbf{R} : \begin{array}{lll}
-			& \begin{array}{llllll} \ \ 1 & 2 &  3 &  4 &  5 &  6 \end{array} & \\
-			\begin{array}{l}  1 \\ 5 \\ 6 \end{array}&
-			\left[\begin{array}{llllll}
-			1 & 0 & 1 & 0 & 1 & 0 \\  
-			1 & 0 & 0 & 0 & 1 & 0 \\ 
-			0 & 0 & 1 & 0 & 0 & 1 \\ 
-			\end{array}\right]
-			\end{array}; \quad\qquad
-			\mathbf{U} : \begin{array}{lll}
-			& \begin{array}{ll} \ \ 2 & 4 \end{array} & \\
-			\begin{array}{l}  1 \\ 5 \\ 6 \end{array}&
-			\left[\begin{array}{ll}
-			0 & 0 \\  
-			0 & 0 \\ 
-			0 & 0 \\ 
-			\end{array}\right]
-			\end{array}
-			\nonumber
-			\end{equation}
-        </div>
-        <div class="content has-text-justified">
-		Illustration of k-hop starved nodes on the Cora and Citeseer datasets (the suffix number in figure represents the number of labeled nodes). 
-		We calculate the number of k-hop starved nodes for k=1, 2, 3, 4 based on their original graph topologies. 
-		Obviously, the number of k-hop starved nodes decreases as the value of k increases. 
-		This can be explained by the fact that as k increases, the nodes have more neighbors (from 1- to k-hop), and the possibility of having at least one labeled neighbor increases.
-        </div>
-      </div>
-    </div>
-  </section>
-
   <section class="section">
     <div class="container is-max-desktop">
-      <!-- Abstract. -->
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
           <h2 class="title is-3">Abstract</h2>
@@ -237,22 +162,29 @@
   </section>
 
 
+
+
   <section class="section">
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column is-full-width">
 			<h2 class="title is-3" align='center'>Latent Graph Inference</h2>
 				<div class="content has-text-justified">
-					Given a graph $\mathcal{G}(\mathcal{V}, \mathbf{X} )$ containing $n$ nodes $\mathcal{V}=\{V_1, \ldots, V_n\}$ and a feature matrix $\mathbf{X} \in \mathbb{R}^{n\times d}$ with each row $\mathbf{X}_{i:} \in \mathbb{R}^d$ representing the $d$-dimensional attributes of node $V_i$, latent graph inference (LGI) aims to simultaneously learn the underlying graph topology encoded by an adjacency matrix $\mathbf{A} \in \mathbb{R}^{n\times n}$ and the discriminative $d'$-dimensional node representations $\mathbf{Z} \in \mathbb{R}^{n\times d'}$ based on $\mathbf{X}$, where the learned $\mathbf{A}$ and $\mathbf{Z}$ are jointly optimal for certain downstream tasks $\mathcal{T}$ given a specific loss function $\mathcal{L}$. 
+					<p>Existing GNNs typically require a prior graph to learn node representations, which poses a major challenge when encountering incomplete or even missing graphs. 
+					This limitation has spurred the development of latent graph inference (LGI), also known as graph structure learning.
+					In general, <b>LGI aims to jointly learn the underlying graph and discriminative node representations solely from the features of nodes</b>.
+					The following gives the definition of latent graph inference.</p>
+					<p><i><b>[Definition 1] (Latent Graph Inference) </b> Given a graph $\mathcal{G}(\mathcal{V}, \mathbf{X} )$ containing $n$ nodes $\mathcal{V}=\{V_1, \ldots, V_n\}$ and a feature matrix $\mathbf{X} \in \mathbb{R}^{n\times d}$ with each row $\mathbf{X}_{i:} \in \mathbb{R}^d$ representing the $d$-dimensional attributes of node $V_i$, latent graph inference (LGI) aims to simultaneously learn the underlying graph topology encoded by an adjacency matrix $\mathbf{A} \in \mathbb{R}^{n\times n}$ and the discriminative $d'$-dimensional node representations $\mathbf{Z} \in \mathbb{R}^{n\times d'}$ based on $\mathbf{X}$, where the learned $\mathbf{A}$ and $\mathbf{Z}$ are jointly optimal for certain downstream tasks $\mathcal{T}$ given a specific loss function $\mathcal{L}$. </i></p>
+					<p>In this work, we adopt the most common settings from existing LGI literatures, considering $\mathcal{T}$ as the semi-supervised node classification task and $\mathcal{L}$ as the cross-entropy loss.</p>
 				</div>
-				</br>
-				</br>
-				</br>
+
+
 
 			<h2 class="title is-3" align='center'>Supervision Starvation</h2>
 				<div class="content has-text-justified">
-				To illustrate the supervision starvation problem~\cite{SLAPS}, we consider a general LGI model $\mathcal{M}$ consisting of a latent graph generator $\mathcal{P}_{\mathbf{\Phi}}$ and a node encoder $\mathcal{F}_{\mathbf{\Theta}}$. 
-				For simplicity, we ignore the activation function and assume that $\mathcal{F}_{\mathbf{\Theta}}$ is implemented using a $1$-layer GNN, \textit{i.e.}, $\mathcal{F}_{\mathbf{\Theta}}=\mathtt{GNN}_1(\mathbf{X}, \mathbf{A}; \mathbf{\Theta})$, where $\mathbf{A}=\mathcal{P}_{\mathbf{\Phi}}(\mathbf{X})$. 
+				<p>
+				Let us consider a general LGI model $\mathcal{M}$ consisting of a latent graph generator $\mathcal{P}_{\mathbf{\Phi}}$ and a node encoder $\mathcal{F}_{\mathbf{\Theta}}$. 
+				For simplicity, we ignore the activation function and assume that $\mathcal{F}_{\mathbf{\Theta}}$ is implemented using a $1$-layer GNN, <i>i.e.</i>, $\mathcal{F}_{\mathbf{\Theta}}=\mathtt{GNN}_1(\mathbf{X}, \mathbf{A}; \mathbf{\Theta})$, where $\mathbf{A}=\mathcal{P}_{\mathbf{\Phi}}(\mathbf{X})$. 
 				For each node $\mathbf{X}_{i:}$, the corresponding node representation $\mathbf{Z}_{i:}$ learned by the model $\mathcal{M}$ can be expressed as:
 				\begin{equation}
 				\mathbf{Z}_{i:} = \mathbf{A}_{i:}\mathbf{X}\mathbf{\Theta} = \left(\sum_{j \in \Omega} \mathbf{A}_{ij}\mathbf{X}_{j:} \right)\mathbf{\Theta},
@@ -261,66 +193,149 @@
 				\begin{equation}
 				\min_{\mathbf{A}, \mathbf{\Theta}} \mathcal{L} = \sum_{i\in \mathcal{Y}_{L}} \sum_{j=1}^{|\mathcal{C}|} \mathbf{Y}_{ij} \ln \mathbf{Z}_{ij} = \sum_{i\in \mathcal{Y}_{L}} \mathbf{Y}_{i:} \ln \mathbf{Z}_{i:}^{\top} = \sum_{i\in \mathcal{Y}_{L}} \mathbf{Y}_{i:} \ln \left( \left(\sum_{j \in \Omega} \mathbf{A}_{ij}\mathbf{X}_{j:} \right)\mathbf{\Theta}\right)^\top,
 				\end{equation} 
-				where $\mathcal{Y}_{L}$ represents the set of indexes of labeled nodes and $|\mathcal{C}|$ denotes the size of label set. 
-				For $\forall i\in \mathcal{Y}_{L}$, $j \in \Omega$, $\mathbf{A}_{ij}$ is optimized via backpropagation under the supervision of label $\mathbf{Y}_{i:}$. 
+				where $\mathcal{Y}_{L}$ represents the set of indexes of labeled nodes and $|\mathcal{C}|$ denotes the size of label set. </p>
+				<p>
+				Let us further analyze the above classificatin loss. For $\forall i\in \mathcal{Y}_{L}$, $j \in \Omega$, $\mathbf{A}_{ij}$ is optimized via backpropagation under the supervision of label $\mathbf{Y}_{i:}$. 
 				For $\forall i \notin \mathcal{Y}_{L}$, however, if $j \notin \mathcal{Y}_{L}$ for $\forall j \in \Omega$, $\mathbf{A}_{ij}$ will receive no supervision from any label and, as a result, cannot be semantically optimal after training. 
 				Consequently, the learning models exhibit poor generalization as the predictions of testing nodes inevitably rely on these supervision-starved weights. 
-				This phenomenon is referred to as \textit{supervision starvation} (SS), where many edge weights are learned without any label supervision.
+				This phenomenon is referred to as <b>Supervision Starvation</b> (SS), where many edge weights are learned without any label supervision. </p>
+				<p>
+				<strong>We may ask why this problem arises?</strong>
+				In fact, the SS problem is caused by a common and necessary post-processing operation known as graph sparsification, which is employed in the majority of LGI methods to generate a sparse latent graph.
+				To be more specific, graph sparsification adjusts the initial dense graph to a sparse one through the following procedure:
+				\begin{equation}
+				\mathbf{A}_{ij}=\left\{
+				\begin{aligned}
+				&\mathbf{A}_{ij},  & \text{if } \  \mathbf{A}_{ij} \in \operatorname{top-\kappa}(\mathbf{A}_{i:})  \\
+				& 0, & \text{otherwise},
+				\end{aligned}
+				\right.
+				\end{equation}
+				where $\operatorname{top-\kappa}(\mathbf{A}_{i:})$ denotes the set of the top $\kappa$ values in $\mathbf{A}_{i:}$. 
+				After this sparsification operation, a significant number of edge weights are directly erased, including the crucial connections established between pivotal nodes and labeled nodes.
+				</p>
+				<p><strong>How many important nodes or connections suffer from this problem? </strong> We delve into this question in the next section. </p>
+				</div>  
+
+
+
+			<h2 class="title is-3" align='center'>Starved Nodes</h2>    
+				<div class="content has-text-justified">
+				<p>To provide an intuitive perspective, we use two real-world graph datasets, Cora and Citeseer, as examples, and calculate the number of k-hop starved nodes based on their original graph topologies. 
+				The following picture shows the statistical results for k=1, 2, 3, 4, where the suffix number of datasets represents the number of labeled nodes. </p>
 				</div>
 
-				<a><img src="./static/images/fig1.jpg"  width="500" ></a>
+				<div align='center'><a><img src="./static/images/fig1.jpg"  width="500" ></a></div>
 				<div class="content has-text-justified">
-				Illustration of k-hop starved nodes on the Cora and Citeseer datasets (the suffix number in figure represents the number of labeled nodes). 
-				We calculate the number of k-hop starved nodes for k=1, 2, 3, 4 based on their original graph topologies. 
-				Obviously, the number of k-hop starved nodes decreases as the value of k increases. 
+				We observe that, the number of k-hop starved nodes decreases as the value of k increases. 
 				This can be explained by the fact that as k increases, the nodes have more neighbors (from 1- to k-hop), and the possibility of having at least one labeled neighbor increases.
 				</div>
 
-				</br>
-				</br>
-				</br>
 
 
-
-			<h2 class="title is-3" align='center'>How to Identify Starved Nodes</h2>    
-				Compression 
-
-				</br>
-				</br>
-				</br>
-
+			<h2 class="title is-3" align='center'>How to Identify Starved Nodes</h2>  
+				<div align='center'>
+				<p align="center">
+					<table><tr>
+					<td><a><img src="./static/images/fig5.jpg"  width="400" ></a></td>
+					<td>\begin{equation} \qquad\quad \end{equation}</td>
+					<td>
+						\begin{equation}   
+							\mathbf{A}: \begin{array}{lll}
+							& \begin{array}{llllll}\ \  1 & 2 & 3 & 4 & 5 & 6 \end{array} & \\
+							\begin{array}{l}  1 \\ 2 \\ 3 \\ 4 \\ 5 \\ 6 \end{array}&
+							\left[\begin{array}{llllll}
+								1 & 0 & 1 & 0 & 1 & 0 \\  
+								0 & 1 & 1 & 1 & 0 & 0 \\ 
+								1 & 1 & 1 & 0 & 0 & 1 \\ 
+								0 & 1 & 0 & 1 & 0 & 0 \\ 
+								1 & 0 & 0 & 0 & 1 & 0 \\ 
+								0 & 0 & 1 & 0 & 0 & 1 \\ 
+							\end{array}\right]
+							\begin{array}{l}  
+							\end{array}
+						\end{array} \nonumber
+						\end{equation}
+					</td>
+					</tr><table>
+				</p>
+	
+						\begin{equation}   
+						\mathbf{C} : \begin{array}{lll}
+						& \begin{array}{ll}\ \ \  2 & 4 \end{array} & \\
+						\begin{array}{l}  1 \\ 2 \\ 3 \\ 4 \\ 5 \\ 6 \end{array}&
+						\left[\begin{array}{llll}
+						0  & 0  \\  
+						1  & 1  \\ 
+						1  & 0  \\ 
+						1  & 1  \\ 
+						0  & 0  \\ 
+						0  & 0  \\ 
+						\end{array}\right]
+						\end{array}; \quad\qquad
+						\mathbf{R} : \begin{array}{lll}
+						& \begin{array}{llllll} \ \ 1 & 2 &  3 &  4 &  5 &  6 \end{array} & \\
+						\begin{array}{l}  1 \\ 5 \\ 6 \end{array}&
+						\left[\begin{array}{llllll}
+						1 & 0 & 1 & 0 & 1 & 0 \\  
+						1 & 0 & 0 & 0 & 1 & 0 \\ 
+						0 & 0 & 1 & 0 & 0 & 1 \\ 
+						\end{array}\right]
+						\end{array}; \quad\qquad
+						\mathbf{U} : \begin{array}{lll}
+						& \begin{array}{ll} \ \ 2 & 4 \end{array} & \\
+						\begin{array}{l}  1 \\ 5 \\ 6 \end{array}&
+						\left[\begin{array}{ll}
+						0 & 0 \\  
+						0 & 0 \\ 
+						0 & 0 \\ 
+						\end{array}\right]
+						\end{array}
+						\nonumber
+						\end{equation}
+				</div>
+				<div class="content has-text-justified">
+					Illustration of k-hop starved nodes on the Cora and Citeseer datasets (the suffix number in figure represents the number of labeled nodes). 
+					We calculate the number of k-hop starved nodes for k=1, 2, 3, 4 based on their original graph topologies. 
+					Obviously, the number of k-hop starved nodes decreases as the value of k increases. 
+					This can be explained by the fact that as k increases, the nodes have more neighbors (from 1- to k-hop), and the possibility of having at least one labeled neighbor increases.
+				</div>
 
 			
 			<h2 class="title is-3" align='center'>How to Eliminate Starved Nodes</h2>
+			
+
 				
-				Compression 
-
-				</br>
-				</br>
-				</br>
-
-
 			<h2 class="title is-3" align='center'>Experiments</h2>
-				<p align="center">
-					<table><tr>
-					<td><a><img src="./static/images/table1.jpg"  height="100" ></a></td>
-					</tr><table>
-				</p>
-				</br>
-				</br>
-				<p align="center">
-					<table><tr>
-					<td><a><img src="./static/images/fig3.jpg"  height="100" ></a></td>
-					<td><a><img src="./static/images/fig4.jpg"  height="100" ></a></td>
-					<td><a><img src="./static/images/fig2.jpg"  height="100" ></a></td>
-					</tr><table>
-				</p>
-     
+				<div align='center'>
+					<p align="center">
+						<table><tr>
+						<td><a><img src="./static/images/table1.jpg"  height="100" ></a></td>
+						</tr><table>
+					</p>
+					</br>
+					</br>
+					<p align="center">
+						<table><tr>
+						<td><a><img src="./static/images/fig3.jpg"  height="100" ></a></td>
+						<td><a><img src="./static/images/fig4.jpg"  height="100" ></a></td>
+						<td><a><img src="./static/images/fig2.jpg"  height="100" ></a></td>
+						</tr><table>
+					</p>
+				</div>
+
+
+
         </div>
       </div>
     </div>
   </section>
 
+
+
+
+
+  
 
 
 
