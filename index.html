@@ -21,21 +21,20 @@
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_HTML" async></script>
   <script type="text/x-mathjax-config">
 	MathJax.Hub.Config({
-	  showProcessingMessages: false, //关闭js加载过程信息
-	  messageStyle: "none", //不显示信息
+	  showProcessingMessages: false,
+	  messageStyle: "none", 
 	  extensions: ["tex2jax.js"],
 	  jax: ["input/TeX", "output/HTML-CSS"],
 	  tex2jax: {
 		inlineMath: [ ['$','$'], ["\\(","\\)"] ],
 		displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
 		skipTags: ['script', 'noscript', 'style', 'textarea', 'pre','code', 'a', 'annotation', 'annotation-xml'],
-		ignoreClass: 'crayon-.*' // 'crayon-' 开头的类，属于Wordpress代码高亮库，这部分不需要处理，否则会导致显示不正确,这部分是正则式，多条之间用'|'分割    
+		ignoreClass: 'crayon-.*'  
 	  },
 	  'HTML-CSS': {
-		  showMathMenu: false //禁用右键菜单
+		  showMathMenu: false
 	  }
 	});
 	MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
@@ -144,7 +143,65 @@
     <div class="container is-max-desktop">
       <div class="hero-body">
         <div align='center'>
-          <a><img src="./static/images/fig1.jpg"  height="40" ></a>
+		
+			<p align="center">
+				<table><tr>
+				<td><a><img src="./static/images/fig5.jpg"  width="400" ></a></td>
+				<td>\begin{equation} \qquad\quad \end{equation}</td>
+				<td>
+					\begin{equation}   
+			\mathbf{A}: \begin{array}{lll}
+			& \begin{array}{llllll}\ \  1 & 2 & 3 & 4 & 5 & 6 \end{array} & \\
+			\begin{array}{l}  1 \\ 2 \\ 3 \\ 4 \\ 5 \\ 6 \end{array}&
+			\left[\begin{array}{llllll}
+				1 & 0 & 1 & 0 & 1 & 0 \\  
+				0 & 1 & 1 & 1 & 0 & 0 \\ 
+				1 & 1 & 1 & 0 & 0 & 1 \\ 
+				0 & 1 & 0 & 1 & 0 & 0 \\ 
+				1 & 0 & 0 & 0 & 1 & 0 \\ 
+				0 & 0 & 1 & 0 & 0 & 1 \\ 
+			\end{array}\right]
+			\begin{array}{l}  
+			\end{array}
+		\end{array} \nonumber
+		\end{equation}
+				</td>
+				</tr><table>
+			</p>
+
+			\begin{equation}   
+			\mathbf{C} : \begin{array}{lll}
+			& \begin{array}{ll}\ \ \  2 & 4 \end{array} & \\
+			\begin{array}{l}  1 \\ 2 \\ 3 \\ 4 \\ 5 \\ 6 \end{array}&
+			\left[\begin{array}{llll}
+			0  & 0  \\  
+			1  & 1  \\ 
+			1  & 0  \\ 
+			1  & 1  \\ 
+			0  & 0  \\ 
+			0  & 0  \\ 
+			\end{array}\right]
+			\end{array}; \quad\qquad
+			\mathbf{R} : \begin{array}{lll}
+			& \begin{array}{llllll} \ \ 1 & 2 &  3 &  4 &  5 &  6 \end{array} & \\
+			\begin{array}{l}  1 \\ 5 \\ 6 \end{array}&
+			\left[\begin{array}{llllll}
+			1 & 0 & 1 & 0 & 1 & 0 \\  
+			1 & 0 & 0 & 0 & 1 & 0 \\ 
+			0 & 0 & 1 & 0 & 0 & 1 \\ 
+			\end{array}\right]
+			\end{array}; \quad\qquad
+			\mathbf{U} : \begin{array}{lll}
+			& \begin{array}{ll} \ \ 2 & 4 \end{array} & \\
+			\begin{array}{l}  1 \\ 5 \\ 6 \end{array}&
+			\left[\begin{array}{ll}
+			0 & 0 \\  
+			0 & 0 \\ 
+			0 & 0 \\ 
+			\end{array}\right]
+			\end{array}
+			\nonumber
+			\end{equation}
         </div>
         <div class="content has-text-justified">
 		Illustration of k-hop starved nodes on the Cora and Citeseer datasets (the suffix number in figure represents the number of labeled nodes). 
@@ -184,78 +241,81 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column is-full-width">
+			<h2 class="title is-3" align='center'>Latent Graph Inference</h2>
+				<div class="content has-text-justified">
+					Given a graph $\mathcal{G}(\mathcal{V}, \mathbf{X} )$ containing $n$ nodes $\mathcal{V}=\{V_1, \ldots, V_n\}$ and a feature matrix $\mathbf{X} \in \mathbb{R}^{n\times d}$ with each row $\mathbf{X}_{i:} \in \mathbb{R}^d$ representing the $d$-dimensional attributes of node $V_i$, latent graph inference (LGI) aims to simultaneously learn the underlying graph topology encoded by an adjacency matrix $\mathbf{A} \in \mathbb{R}^{n\times n}$ and the discriminative $d'$-dimensional node representations $\mathbf{Z} \in \mathbb{R}^{n\times d'}$ based on $\mathbf{X}$, where the learned $\mathbf{A}$ and $\mathbf{Z}$ are jointly optimal for certain downstream tasks $\mathcal{T}$ given a specific loss function $\mathcal{L}$. 
+				</div>
+				</br>
+				</br>
+				</br>
 
-		  <h2 class="title is-3" align='center'>Latent Graph Inference</h2>
-		  Given a graph $\mathcal{G}(\mathcal{V}, \mathbf{X} )$ containing $n$ nodes $\mathcal{V}=\{V_1, \ldots, V_n\}$ and a feature matrix $\mathbf{X} \in \mathbb{R}^{n\times d}$ with each row $\mathbf{X}_{i:} \in \mathbb{R}^d$ representing the $d$-dimensional attributes of node $V_i$, latent graph inference (LGI) aims to simultaneously learn the underlying graph topology encoded by an adjacency matrix $\mathbf{A} \in \mathbb{R}^{n\times n}$ and the discriminative $d'$-dimensional node representations $\mathbf{Z} \in \mathbb{R}^{n\times d'}$ based on $\mathbf{X}$, where the learned $\mathbf{A}$ and $\mathbf{Z}$ are jointly optimal for certain downstream tasks $\mathcal{T}$ given a specific loss function $\mathcal{L}$. 
+			<h2 class="title is-3" align='center'>Supervision Starvation</h2>
+				<div class="content has-text-justified">
+				To illustrate the supervision starvation problem~\cite{SLAPS}, we consider a general LGI model $\mathcal{M}$ consisting of a latent graph generator $\mathcal{P}_{\mathbf{\Phi}}$ and a node encoder $\mathcal{F}_{\mathbf{\Theta}}$. 
+				For simplicity, we ignore the activation function and assume that $\mathcal{F}_{\mathbf{\Theta}}$ is implemented using a $1$-layer GNN, \textit{i.e.}, $\mathcal{F}_{\mathbf{\Theta}}=\mathtt{GNN}_1(\mathbf{X}, \mathbf{A}; \mathbf{\Theta})$, where $\mathbf{A}=\mathcal{P}_{\mathbf{\Phi}}(\mathbf{X})$. 
+				For each node $\mathbf{X}_{i:}$, the corresponding node representation $\mathbf{Z}_{i:}$ learned by the model $\mathcal{M}$ can be expressed as:
+				\begin{equation}
+				\mathbf{Z}_{i:} = \mathbf{A}_{i:}\mathbf{X}\mathbf{\Theta} = \left(\sum_{j \in \Omega} \mathbf{A}_{ij}\mathbf{X}_{j:} \right)\mathbf{\Theta},
+				\end{equation}
+				where $\Omega=\{j\ |\  \mathbb{1}_{\mathbb{R}^+}(\mathbf{A})_{ij}=1 \}$ and $\mathbf{A}_{ij}=\mathcal{P}_{\mathbf{\Phi}}(\mathbf{X}_{i:}, \mathbf{X}_{j:})$. Consider the node classification loss:
+				\begin{equation}
+				\min_{\mathbf{A}, \mathbf{\Theta}} \mathcal{L} = \sum_{i\in \mathcal{Y}_{L}} \sum_{j=1}^{|\mathcal{C}|} \mathbf{Y}_{ij} \ln \mathbf{Z}_{ij} = \sum_{i\in \mathcal{Y}_{L}} \mathbf{Y}_{i:} \ln \mathbf{Z}_{i:}^{\top} = \sum_{i\in \mathcal{Y}_{L}} \mathbf{Y}_{i:} \ln \left( \left(\sum_{j \in \Omega} \mathbf{A}_{ij}\mathbf{X}_{j:} \right)\mathbf{\Theta}\right)^\top,
+				\end{equation} 
+				where $\mathcal{Y}_{L}$ represents the set of indexes of labeled nodes and $|\mathcal{C}|$ denotes the size of label set. 
+				For $\forall i\in \mathcal{Y}_{L}$, $j \in \Omega$, $\mathbf{A}_{ij}$ is optimized via backpropagation under the supervision of label $\mathbf{Y}_{i:}$. 
+				For $\forall i \notin \mathcal{Y}_{L}$, however, if $j \notin \mathcal{Y}_{L}$ for $\forall j \in \Omega$, $\mathbf{A}_{ij}$ will receive no supervision from any label and, as a result, cannot be semantically optimal after training. 
+				Consequently, the learning models exhibit poor generalization as the predictions of testing nodes inevitably rely on these supervision-starved weights. 
+				This phenomenon is referred to as \textit{supervision starvation} (SS), where many edge weights are learned without any label supervision.
+				</div>
 
-		</br>
-		</br>
-		</br>
+				<a><img src="./static/images/fig1.jpg"  width="500" ></a>
+				<div class="content has-text-justified">
+				Illustration of k-hop starved nodes on the Cora and Citeseer datasets (the suffix number in figure represents the number of labeled nodes). 
+				We calculate the number of k-hop starved nodes for k=1, 2, 3, 4 based on their original graph topologies. 
+				Obviously, the number of k-hop starved nodes decreases as the value of k increases. 
+				This can be explained by the fact that as k increases, the nodes have more neighbors (from 1- to k-hop), and the possibility of having at least one labeled neighbor increases.
+				</div>
 
-		  <h2 class="title is-3" align='center'>Supervision Starvation</h2>
-		
-		To illustrate the supervision starvation problem, we consider a general LGI model `\mathcal{M}` consisting of a latent graph generator `\mathcal{P}_{\mathbf{\Phi}}` and a node encoder $\mathcal{F}_{\mathbf{\Theta}}$. 
-		For simplicity, we ignore the activation function and assume that $\mathcal{F}_{\mathbf{\Theta}}$ is implemented using a $1$-layer GNN, \textit{i.e.}, $\mathcal{F}_{\mathbf{\Theta}}=\mathtt{GNN}_1(\mathbf{X}, \mathbf{A}; \mathbf{\Theta})$, where $\mathbf{A}=\mathcal{P}_{\mathbf{\Phi}}(\mathbf{X})$. 
-		For each node $\mathbf{X}_{i:}$, the corresponding node representation $\mathbf{Z}_{i:}$ learned by the model $\mathcal{M}$ can be expressed as:
-		\begin{equation}
-		\mathbf{Z}_{i:} = \mathbf{A}_{i:}\mathbf{X}\mathbf{\Theta} = \left(\sum_{j \in \Omega} \mathbf{A}_{ij}\mathbf{X}_{j:} \right)\mathbf{\Theta},
-		\end{equation}
-		where $\Omega=\{j\ |\  \mathbbm{1}_{\mathbb{R}^+}(\mathbf{A})_{ij}=1 \}$ and $\mathbf{A}_{ij}=\mathcal{P}_{\mathbf{\Phi}}(\mathbf{X}_{i:}, \mathbf{X}_{j:})$. Consider the node classification loss:
-		\begin{equation}
-		\min_{\mathbf{A}, \mathbf{\Theta}} \mathcal{L} = \sum_{i\in \mathcal{Y}_{L}} \sum_{j=1}^{|\mathcal{C}|} \mathbf{Y}_{ij} \ln \mathbf{Z}_{ij} = \sum_{i\in \mathcal{Y}_{L}} \mathbf{Y}_{i:} \ln \mathbf{Z}_{i:}^{\top} = \sum_{i\in \mathcal{Y}_{L}} \mathbf{Y}_{i:} \ln \left( \left(\sum_{j \in \Omega} \mathbf{A}_{ij}\mathbf{X}_{j:} \right)\mathbf{\Theta}\right)^\top,
-		\end{equation} 
-		where $\mathcal{Y}_{L}$ represents the set of indexes of labeled nodes and $|\mathcal{C}|$ denotes the size of label set. 
-		For $\forall i\in \mathcal{Y}_{L}$, $j \in \Omega$, $\mathbf{A}_{ij}$ is optimized via backpropagation under the supervision of label $\mathbf{Y}_{i:}$. 
-		For $\forall i \notin \mathcal{Y}_{L}$, however, if $j \notin \mathcal{Y}_{L}$ for $\forall j \in \Omega$, $\mathbf{A}_{ij}$ will receive no supervision from any label and, as a result, cannot be semantically optimal after training. 
-		Consequently, the learning models exhibit poor generalization as the predictions of testing nodes inevitably rely on these supervision-starved weights. 
-		This phenomenon is referred to as \textit{supervision starvation} (SS), where many edge weights are learned without any label supervision. 
-		It is easy to infer that this issue also persists in a $k$-layer GNN. 
-
-
-	</br>
-	</br>
-	</br>
-
-
-
-	<h2 class="title is-3" align='center'>How to Identify Starved Nodes</h2>
-           
-    Compression 
-
-	</br>
-	</br>
-	</br>
+				</br>
+				</br>
+				</br>
 
 
-	
-	<h2 class="title is-3" align='center'>How to Eliminate Starved Nodes</h2>
-           
-    Compression 
 
-	</br>
-	</br>
-	</br>
+			<h2 class="title is-3" align='center'>How to Identify Starved Nodes</h2>    
+				Compression 
 
-
-	<h2 class="title is-3" align='center'>Experiments</h2>
-
-          <p align="center">
-            <table><tr>
-            <td><a><img src="./static/images/table1.jpg"  height="100" ></a></td>
-            </tr><table>
-          </p>
-		</br>
-		  <p align="center">
-            <table><tr>
-            <td><a><img src="./static/images/fig3.jpg"  height="100" ></a></td>
-			<td><a><img src="./static/images/fig4.jpg"  height="100" ></a></td>
-			<td><a><img src="./static/images/fig2.jpg"  height="100" ></a></td>
-            </tr><table>
-          </p>
-    Performances 
+				</br>
+				</br>
+				</br>
 
 
-        
+			
+			<h2 class="title is-3" align='center'>How to Eliminate Starved Nodes</h2>
+				
+				Compression 
+
+				</br>
+				</br>
+				</br>
+
+
+			<h2 class="title is-3" align='center'>Experiments</h2>
+				<p align="center">
+					<table><tr>
+					<td><a><img src="./static/images/table1.jpg"  height="100" ></a></td>
+					</tr><table>
+				</p>
+				</br>
+				</br>
+				<p align="center">
+					<table><tr>
+					<td><a><img src="./static/images/fig3.jpg"  height="100" ></a></td>
+					<td><a><img src="./static/images/fig4.jpg"  height="100" ></a></td>
+					<td><a><img src="./static/images/fig2.jpg"  height="100" ></a></td>
+					</tr><table>
+				</p>
+     
         </div>
       </div>
     </div>
@@ -265,30 +325,25 @@
 
 
 
-  <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-      <h2 class="title">BibTeX</h2>
-      <pre><code>@inproceedigs{Jianglin2023LGI,
-	title={Latent Graph Inference with Limited Supervision},
-	author={Jianglin Lu, Yi Xu, Huan Wang, Yue Bai, Yun Fu},
-	booktitle={Advances in Neural Information Processing Systems},
-	year={2023}
-  }
+<section class="section" id="BibTeX">
+<div align="left">
+	<h2 class="title">BibTeX</h2>
+	<pre><code>@inproceedigs{Jianglin2023LGI,
+title={Latent Graph Inference with Limited Supervision},
+author={Jianglin Lu, Yi Xu, Huan Wang, Yue Bai, Yun Fu},
+booktitle={Advances in Neural Information Processing Systems},
+year={2023}
+}
 </code></pre>
     </div>
   </section>
 
 
-
-  <footer class="footer">
-    <div align="center" class="container">
-      <div class="columns is-centered">
+    <div align="center">
         <div class="content">
           This website is borrowed from <a href="https://github.com/nerfies/nerfies.github.io">nerfies</a>.
         </div>
-      </div>
     </div>
-  </footer>
 
 </body>
 
