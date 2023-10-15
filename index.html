@@ -125,10 +125,18 @@
     <div class="container is-max-desktop">
       <div class="hero-body">
         <div align='center'>
-          <a><img src="figs/main_figure_cr.svg"  height="200" ></a>
+          <a><img src="./static/images/fig1.jpg"  height="100" ></a>
         </div>
         <div class="content has-text-justified">
-          Left is \begin{equation} a = b + c \end{equation}
+		Illustration of k-hop starved nodes on different datasets. Obviously, the number of k-hop starved nodes decreases as the value of k increases. To provide an intuitive perspective, we use two real-world graph datasets, namely Cora ($2708$ nodes) and Citeseer ($3327$ nodes), as examples. We calculate the number of $k$-hop starved nodes for $k=1, 2, 3, 4$, based on their original graph topology. 
+Fig. \ref{fig1} shows the statistical results for the Cora140, Cora390, Citesser120, and Citeseer370 datasets, where the suffix number represents the number of labeled nodes. 
+From Fig. \ref{fig1}, we observe that as the value of $k$ increases, the number of starved nodes decreases. 
+This can be explained by the fact that as $k$ increases, the nodes have more neighbors (from $1$- to $k$-hop), and the possibility of having at least one labeled neighbor increases. 
+Adopting a deeper GNN (larger $k$) can thus mitigate the SS problem. 
+However, it is important to consider that deeper GNNs result in higher computational consumption and may lead to poorer generalization performance~\cite{Li2018, Kenta2020, Alon2021}. 
+Furthermore, as shown in Fig. \ref{fig1}, even with a $4$-layer GNN, there are still hundreds of $4$-hop starved nodes in the Citesser120. 
+Therefore, we believe that employing a deeper GNN is not the optimal solution to resolve the SS problem.
+
         </div>
       </div>
     </div>
@@ -163,14 +171,12 @@
       <div class="columns is-centered">
         <div class="column is-full-width">
 
-          
-          <h2 class="title is-3" align='center'>Background</h2>
-		  <h3 class="title is-3" align='center'>Latent Graph Inference</h3>
+		  <h2 class="title is-3" align='center'>Latent Graph Inference</h2>
 		  Given a graph $\mathcal{G}(\mathcal{V}, \mathbf{X} )$ containing $n$ nodes $\mathcal{V}=\{V_1, \ldots, V_n\}$ and a feature matrix $\mathbf{X} \in \mathbb{R}^{n\times d}$ with each row $\mathbf{X}_{i:} \in \mathbb{R}^d$ representing the $d$-dimensional attributes of node $V_i$, latent graph inference (LGI) aims to simultaneously learn the underlying graph topology encoded by an adjacency matrix $\mathbf{A} \in \mathbb{R}^{n\times n}$ and the discriminative $d'$-dimensional node representations $\mathbf{Z} \in \mathbb{R}^{n\times d'}$ based on $\mathbf{X}$, where the learned $\mathbf{A}$ and $\mathbf{Z}$ are jointly optimal for certain downstream tasks $\mathcal{T}$ given a specific loss function $\mathcal{L}$. 
 
-		  <h3 class="title is-3" align='center'>Supervision Starvation</h3>
+		  <h2 class="title is-3" align='center'>Supervision Starvation</h2>
 		
-		To illustrate the supervision starvation problem~\cite{SLAPS}, we consider a general LGI model $\mathcal{M}$ consisting of a latent graph generator $\mathcal{P}_{\mathbf{\Phi}}$ and a node encoder $\mathcal{F}_{\mathbf{\Theta}}$. 
+		To illustrate the supervision starvation problem, we consider a general LGI model `\mathcal{M}` consisting of a latent graph generator `\mathcal{P}_{\mathbf{\Phi}}` and a node encoder $\mathcal{F}_{\mathbf{\Theta}}$. 
 		For simplicity, we ignore the activation function and assume that $\mathcal{F}_{\mathbf{\Theta}}$ is implemented using a $1$-layer GNN, \textit{i.e.}, $\mathcal{F}_{\mathbf{\Theta}}=\mathtt{GNN}_1(\mathbf{X}, \mathbf{A}; \mathbf{\Theta})$, where $\mathbf{A}=\mathcal{P}_{\mathbf{\Phi}}(\mathbf{X})$. 
 		For each node $\mathbf{X}_{i:}$, the corresponding node representation $\mathbf{Z}_{i:}$ learned by the model $\mathcal{M}$ can be expressed as:
 		\begin{equation}
