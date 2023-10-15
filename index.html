@@ -22,6 +22,25 @@
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_HTML" async></script>
+  <script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+	  showProcessingMessages: false, //关闭js加载过程信息
+	  messageStyle: "none", //不显示信息
+	  extensions: ["tex2jax.js"],
+	  jax: ["input/TeX", "output/HTML-CSS"],
+	  tex2jax: {
+		inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+		displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+		skipTags: ['script', 'noscript', 'style', 'textarea', 'pre','code', 'a', 'annotation', 'annotation-xml'],
+		ignoreClass: 'crayon-.*' // 'crayon-' 开头的类，属于Wordpress代码高亮库，这部分不需要处理，否则会导致显示不正确,这部分是正则式，多条之间用'|'分割    
+	  },
+	  'HTML-CSS': {
+		  showMathMenu: false //禁用右键菜单
+	  }
+	});
+	MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+  </script>
+  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
 </head>
 
 <body>
@@ -128,8 +147,8 @@
           <a><img src="./static/images/fig1.jpg"  height="40" ></a>
         </div>
         <div class="content has-text-justified">
-		Illustration of k-hop starved nodes on different datasets. 
-		We calculate the number of k-hop starved nodes for Cora and Citeseer datasets based on their original graph topologies (where the suffix number represents the number of labeled nodes). 
+		Illustration of k-hop starved nodes on the Cora and Citeseer datasets (the suffix number in figure represents the number of labeled nodes). 
+		We calculate the number of k-hop starved nodes for k=1, 2, 3, 4 based on their original graph topologies. 
 		Obviously, the number of k-hop starved nodes decreases as the value of k increases. 
 		This can be explained by the fact that as k increases, the nodes have more neighbors (from 1- to k-hop), and the possibility of having at least one labeled neighbor increases.
         </div>
