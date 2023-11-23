@@ -49,7 +49,7 @@ The experimental results will be saved in the corresponding *.txt file.
 
     @inproceedigs{Jianglin2023LGI,
       title={Latent Graph Inference with Limited Supervision},
-      author={Jianglin Lu, Yi Xu, Huan Wang, Yue Bai, Yun Fu},
+      author={Lu, Jianglin and Xu, Yi and Wang, Huan and Bai, Yue and Fu, Yun},
       booktitle={Advances in Neural Information Processing Systems},
       year={2023}
     }
