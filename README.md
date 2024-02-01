@@ -47,14 +47,14 @@ The experimental results will be saved in the corresponding *.txt file.
 
 # Reference
 
-    @inproceedigs{Jianglin2023LGI,
+    @inproceedings{Jianglin2023LGI,
       title={Latent Graph Inference with Limited Supervision},
       author={Lu, Jianglin and Xu, Yi and Wang, Huan and Bai, Yue and Fu, Yun},
       booktitle={Advances in Neural Information Processing Systems},
       year={2023}
     }
 
-    @inproceedigs{fatemi2021slaps,
+    @inproceedings{fatemi2021slaps,
       title={SLAPS: Self-Supervision Improves Structure Learning for Graph Neural Networks},
       author={Fatemi, Bahare and Asri, Layla El and Kazemi, Seyed Mehran},
       booktitle={Advances in Neural Information Processing Systems},
